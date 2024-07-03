@@ -1,8 +1,7 @@
-"use client"
-
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import logo2 from "../../public/logo2.png";
 
 import { cn } from "@/lib/utils"
 import {
@@ -15,104 +14,132 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const components: { title: string; href: string; description: string }[] = [
+const projects: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Corporate and Commercial Clients",
+    href: "/projects/corporate",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Offering tailored solutions to meet the unique needs of corporate and commercial clients.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Hospitality Industry",
+    href: "/projects/hospitality",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Creating inviting and functional spaces for the hospitality industry.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Banking Industry",
+    href: "/projects/banking",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Designing secure and professional environments for the banking sector.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Institutions",
+    href: "/projects/institutions",
+    description: "Transforming institutional spaces with innovative designs.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Residential Works",
+    href: "/projects/residential",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Crafting personalized and comfortable residential spaces.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Landscaping",
+    href: "/projects/landscaping",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Enhancing outdoor areas with beautiful and sustainable landscaping.",
   },
 ]
 
 export function NavBar() {
   return (
     <NavigationMenu>
-        <NavigationMenuList className="flex space-x-4">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Jawabu Interiors
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Jawabu Interiors is a Limited Company founded by Yvonne Mutisya as the Executive Director and supported by intellected and effective colleagues 
-                        to deliver innovative, creative, and eco-friendly concepts that reflect the culture and traditions of the region.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
+      <NavigationMenuList className="flex space-x-4">
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/"
                   >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Catalogue
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
+                    <div className="mb-2 mt-4 text-lg font-medium">
+                      <Image src={logo2} alt="Logo" width={50} height={50} />
+                    </div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                      Jawabu Interiors is a Limited Company founded by Yvonne Mutisya as the Executive Director and supported by intellected and effective colleagues 
+                      to deliver innovative, creative, and eco-friendly concepts that reflect the culture and traditions of the region.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <ListItem href="/philosophy" title="Philosophy">
+                Our design philosophy emphasizes sustainability, functionality, and cultural sensitivity, ensuring each project is both unique and meaningful.
+              </ListItem>
+              <ListItem href="/discover" title="Discover">
+                Explore our wide range of services and past projects to see how we can transform your spaces into extraordinary environments.
+              </ListItem>
+              <ListItem href="/process" title="Process">
+                Our process involves close collaboration with clients from concept to completion, ensuring every detail aligns with your vision.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {projects.map((project) => (
+                <ListItem
+                  key={project.title}
+                  title={project.title}
+                  href={project.href}
+                >
+                  {project.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/services" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Services
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/about" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              About
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/blog" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Blog
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/catalogue" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Catalogue
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+      </NavigationMenuList>
     </NavigationMenu>
   )
 }
