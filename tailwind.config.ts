@@ -1,13 +1,13 @@
-// tailwind.config.js
 import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -54,11 +54,12 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         green: {
-          600: '#00a651', // Adjust this color to match your logo color
+          600: "#00a651", // Adjust this color to match your logo color
         },
       },
       fontFamily: {
-        greatvibes: ['"Great Vibes"', 'cursive'],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        greatvibes: ['"Great Vibes"', "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -81,7 +82,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),require('daisyui'),]
-} satisfies Config;
+  plugins: [require("tailwindcss-animate"), require("daisyui")],
+};
 
 export default config;
