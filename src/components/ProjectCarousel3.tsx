@@ -28,7 +28,7 @@ interface JW_Backend {
   project_name: string;
 }
 
-export default function ProjectCarousel2() {
+export default function ProjectCarousel3() {
   const [images, setImages] = useState<UnsplashImage[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [projects, setProjects] = useState<JW_Backend[]>([]);
@@ -37,7 +37,7 @@ export default function ProjectCarousel2() {
     const fetchImages = async () => {
       try {
         const response = await axios.get(
-          `https://api.unsplash.com/search/photos?query=commercial-interior&orientation=landscape&client_id=${ACCESS_KEY}`,
+          `https://api.unsplash.com/search/photos?query=residential-interior&orientation=landscape&client_id=${ACCESS_KEY}`,
         );
         setImages(response.data.results);
       } catch (error) {
