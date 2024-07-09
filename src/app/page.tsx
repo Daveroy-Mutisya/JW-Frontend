@@ -10,6 +10,7 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import ProjectCarousel2 from "@/components/ProjectCarousel2";
 import ProjectCarousel3 from "@/components/ProjectCarousel3";
 import BlurBackground from "@/components/BlurBackground";
+import ProcessSection from "@/components/Process";
 
 const ACCESS_KEY = "nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4";
 
@@ -58,6 +59,9 @@ export default function Home() {
           </h1>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ml-4 text-green-500">
             Interiors
+          </h1>
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ml-4 text-white-500">
+            Ltd
           </h1>
         </div>
         <div>
@@ -114,6 +118,9 @@ export default function Home() {
       </section>
       <section className="relative h-screen flex flex-col justify-center items-center">
         <BlurBackground />
+      </section>
+      <section className="relative h-screen flex flex-col justify-center items-center">
+        <ProcessSection />
       </section>
     </>
   );

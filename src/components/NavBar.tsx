@@ -133,9 +133,9 @@ export function NavBar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/catalogue" legacyBehavior passHref>
+          <Link href="" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Catalogue
+              Login
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
