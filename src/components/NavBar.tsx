@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import logo2 from "../../public/logo2.png";
 
+
 import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
@@ -14,51 +15,51 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const projects: { title: string; href: string; description: string }[] = [
-  {
-    title: "Corporate and Commercial Clients",
-    href: "/projects/corporate",
-    description:
-      "Offering tailored solutions to meet the unique needs of corporate and commercial clients.",
-  },
-  {
-    title: "Hospitality Industry",
-    href: "/projects/hospitality",
-    description:
-      "Creating inviting and functional spaces for the hospitality industry.",
-  },
-  {
-    title: "Banking Industry",
-    href: "/projects/banking",
-    description:
-      "Designing secure and professional environments for the banking sector.",
-  },
-  {
-    title: "Institutions",
-    href: "/projects/institutions",
-    description: "Transforming institutional spaces with innovative designs.",
-  },
-  {
-    title: "Residential Works",
-    href: "/projects/residential",
-    description:
-      "Crafting personalized and comfortable residential spaces.",
-  },
-  {
-    title: "Landscaping",
-    href: "/projects/landscaping",
-    description:
-      "Enhancing outdoor areas with beautiful and sustainable landscaping.",
-  },
-]
+// const projects: { title: string; href: string; description: string }[] = [
+//   {
+//     title: "Corporate and Commercial Clients",
+//     href: "/projects/corporate",
+//     description:
+//       "Offering tailored solutions to meet the unique needs of corporate and commercial clients.",
+//   },
+//   {
+//     title: "Hospitality Industry",
+//     href: "/projects/hospitality",
+//     description:
+//       "Creating inviting and functional spaces for the hospitality industry.",
+//   },
+//   {
+//     title: "Banking Industry",
+//     href: "/projects/banking",
+//     description:
+//       "Designing secure and professional environments for the banking sector.",
+//   },
+//   {
+//     title: "Institutions",
+//     href: "/projects/institutions",
+//     description: "Transforming institutional spaces with innovative designs.",
+//   },
+//   {
+//     title: "Residential Works",
+//     href: "/projects/residential",
+//     description:
+//       "Crafting personalized and comfortable residential spaces.",
+//   },
+//   {
+//     title: "Landscaping",
+//     href: "/projects/landscaping",
+//     description:
+//       "Enhancing outdoor areas with beautiful and sustainable landscaping.",
+//   },
+// ]
 
 export function NavBar() {
   return (
     <NavigationMenu>
       <NavigationMenuList className="flex space-x-4">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuTrigger><a href="/">Home</a></NavigationMenuTrigger>
+          {/* <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -86,11 +87,11 @@ export function NavBar() {
                 Our process involves close collaboration with clients from concept to completion, ensuring every detail aligns with your vision.
               </ListItem>
             </ul>
-          </NavigationMenuContent>
+          </NavigationMenuContent> */}
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuTrigger><a href="/Projects">Projects</a></NavigationMenuTrigger>
+          {/* <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {projects.map((project) => (
                 <ListItem
@@ -102,31 +103,31 @@ export function NavBar() {
                 </ListItem>
               ))}
             </ul>
-          </NavigationMenuContent>
+          </NavigationMenuContent> */}
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href="/services" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Services
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
-          <Link href="/about" legacyBehavior passHref>
+          <Link href="/About" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/blog" legacyBehavior passHref>
+          <Link href="/Blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blog
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact" legacyBehavior passHref>
+          <Link href="/Contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact
             </NavigationMenuLink>

@@ -9,7 +9,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Jawabu-Interiors",
+  title: "JW",
 };
 
 export default function RootLayout({

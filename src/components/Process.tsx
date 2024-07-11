@@ -36,7 +36,7 @@ const ProcessSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-20 text-white text-center">
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Meet & Agree" width={100} height={100} />
+              <Image src={circle} alt="Meet & Agree" width={300} height={300} />
               <h4 className="text-xl font-semibold">Meet & Agree</h4>
             </DrawerTrigger>
             <DrawerContent>
@@ -55,7 +55,7 @@ const ProcessSection = () => {
           </Drawer>
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Idea & Concept" width={100} height={100} />
+              <Image src={circle} alt="Idea & Concept" width={300} height={300} />
               <h4 className="text-xl font-semibold">Idea & Concept</h4>
             </DrawerTrigger>
             <DrawerContent>
@@ -74,7 +74,7 @@ const ProcessSection = () => {
           </Drawer>
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Design & Create" width={100} height={100} />
+              <Image src={circle} alt="Design & Create" width={300} height={300} />
               <h4 className="text-xl font-semibold">Design & Create</h4>
             </DrawerTrigger>
             <DrawerContent>
@@ -93,7 +93,7 @@ const ProcessSection = () => {
           </Drawer>
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Build & Install" width={100} height={100} />
+              <Image src={circle} alt="Build & Install" width={300} height={300} />
               <h4 className="text-xl font-semibold">Build & Install</h4>
             </DrawerTrigger>
             <DrawerContent>

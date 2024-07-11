@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -19,7 +21,7 @@ interface UnsplashImage {
   alt_description: string;
 }
 
-const BlurBackground = () => {
+const FeaturesSection = () => {
   const [images, setImages] = useState<UnsplashImage[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -133,4 +135,4 @@ const BlurBackground = () => {
   );
 };
 
-export default BlurBackground;
+export default FeaturesSection;
