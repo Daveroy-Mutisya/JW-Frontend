@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavBar } from '@/components/NavBar';
+import BlogLandingSection from '@/components/BlogLanding';
+import BlogCard from '@/components/BlogList';
 
 const BlogPage = () => {
   return (
@@ -20,6 +22,12 @@ const BlogPage = () => {
           <NavBar />
         </div>
       </div>
+      <section>
+          <BlogLandingSection/>
+        </section>
+        <section>
+          < BlogCard />
+        </section>
     </>
   )
 }
