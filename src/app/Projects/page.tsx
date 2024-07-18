@@ -21,7 +21,7 @@ const ProjectsPage = () => {
           <NavBar />
         </div>
       </div>
-      <section className="relative h-screen flex flex-col gap-2 items-center">
+      <section className="flex flex-col gap-2 items-center">
        <ProjectCard />
        </section>
     </>

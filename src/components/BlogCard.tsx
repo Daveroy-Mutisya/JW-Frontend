@@ -1,11 +1,11 @@
+// src/components/BlogCard.tsx
+
 'use client'
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import { Skeleton } from '@/components/ui/skeleton';
-
-const ACCESS_KEY = 'nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4';
 
 interface Blog {
   id: number;
@@ -18,6 +18,7 @@ interface Blog {
 
 const BlogCard = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     const API = 'http://127.0.0.1:5000';
@@ -36,6 +37,10 @@ const BlogCard = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleCardClick = (id: number) => {
+    router.push(`/Blog/${id}`);
+  };
+
   return (
     <>
       <div className='items-center justify-center mt-10'>
@@ -47,7 +52,7 @@ const BlogCard = () => {
             <Skeleton className="w-full h-[500px] col-span-1" />
           ) : (
             blogs.map((blog) => (
-              <div key={blog.id} className="relative group">
+              <div key={blog.id} className="relative group cursor-pointer" onClick={() => handleCardClick(blog.id)}>
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   {blog.image ? (
                     <Image

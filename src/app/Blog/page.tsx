@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavBar } from '@/components/NavBar';
 import BlogLandingSection from '@/components/BlogLanding';
-import BlogCard from '@/components/BlogList';
+import BlogCard from '@/components/BlogCard';
 
 const BlogPage = () => {
   return (

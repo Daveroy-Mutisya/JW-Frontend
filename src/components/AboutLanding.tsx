@@ -44,7 +44,7 @@ const  AboutLandingSection = () => {
   return (
     <>
           <div className="relative h-screen w-full">
-        {image && (
+        {/* {image && (
           <Image
             src={image.urls.full}
             alt={image.alt_description || 'Green Interior Design'}
@@ -52,7 +52,7 @@ const  AboutLandingSection = () => {
             objectFit="cover"
             className="blur-md z-0"
           />
-        )}
+        )} */}
         <div className="relative z-20 text-white text-left p-4 hover:text-opacity-100 text-opacity-50 transition duration-300 ease-in-out flex flex-col items-center justify-center h-full">
           <h2 className="scroll-m-20 border-b pb-2 text-9xl font-semibold tracking-tight first:mt-0">
             About Us
