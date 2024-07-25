@@ -3,6 +3,7 @@ import ProjectCarousel from './ProjectCarousel';
 import ProjectCarousel2 from './ProjectCarousel2';
 import ProjectCarousel3 from './ProjectCarousel3';
 import RedirectButton from './RedirectButton';
+import { useMediaQuery } from 'react-responsive'
 
 const Philosophy = () => {
   return (
@@ -21,24 +22,12 @@ const Philosophy = () => {
         </div>
         <div className="flex justify-center w-full my-10">
           <div className="flex flex-col items-center mx-14">
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              Corporate Design
-            </h4>
             <ProjectCarousel />
           </div>
           <div className="flex flex-col items-center mx-14">
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              Commercial Design      
-            </h4>
             <ProjectCarousel2 />
-            <div className="my-6">
-              <RedirectButton />
-            </div>
           </div>
           <div className="flex flex-col items-center mx-14">
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              Residential Design      
-            </h4>
             <ProjectCarousel3 />
           </div>
         </div>

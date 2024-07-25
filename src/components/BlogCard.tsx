@@ -38,6 +38,7 @@ const BlogCard = () => {
   }, []);
 
   const handleCardClick = (id: number) => {
+    localStorage.setItem('selectedBlogId', id.toString());
     router.push(`/Blog/${id}`);
   };
 

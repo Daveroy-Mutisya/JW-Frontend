@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const ACCESS_KEY = 'nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4';
@@ -23,6 +24,7 @@ interface JW_Backend {
 const ProjectCard = () => {
   const [images, setImages] = useState<UnsplashImage[]>([]);
   const [projects, setProjects] = useState<JW_Backend[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -56,6 +58,11 @@ const ProjectCard = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleCardClick = (id: number) => {
+    localStorage.setItem('selectedProjectId', id.toString());
+    router.push(`/Projects/${id}`);
+  };
+
   return (
     <>
       <div className='items-center justify-center'>
@@ -67,7 +74,7 @@ const ProjectCard = () => {
             <Skeleton className="w-full h-[500px] col-span-1" />
           ) : (
             projects.map((project, index) => (
-              <div key={project.id} className="relative w-full h-[500px] group overflow-hidden rounded-md">
+              <div key={project.id} className="relative w-full h-[500px] group overflow-hidden rounded-md cursor-pointer" onClick={() => handleCardClick(project.id)}>
                 {images[index] ? (
                   <Image
                     src={images[index].urls.full}

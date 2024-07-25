@@ -1,10 +1,12 @@
-import * as React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import logo2 from "../../public/logo2.png";
+'use client'
 
-
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import menuIcon from "../../public/menu.png";
+import closeIcon from "../../public/close.png";
+import { useState, useEffect } from 'react';
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,136 +15,114 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-
-// const projects: { title: string; href: string; description: string }[] = [
-//   {
-//     title: "Corporate and Commercial Clients",
-//     href: "/projects/corporate",
-//     description:
-//       "Offering tailored solutions to meet the unique needs of corporate and commercial clients.",
-//   },
-//   {
-//     title: "Hospitality Industry",
-//     href: "/projects/hospitality",
-//     description:
-//       "Creating inviting and functional spaces for the hospitality industry.",
-//   },
-//   {
-//     title: "Banking Industry",
-//     href: "/projects/banking",
-//     description:
-//       "Designing secure and professional environments for the banking sector.",
-//   },
-//   {
-//     title: "Institutions",
-//     href: "/projects/institutions",
-//     description: "Transforming institutional spaces with innovative designs.",
-//   },
-//   {
-//     title: "Residential Works",
-//     href: "/projects/residential",
-//     description:
-//       "Crafting personalized and comfortable residential spaces.",
-//   },
-//   {
-//     title: "Landscaping",
-//     href: "/projects/landscaping",
-//     description:
-//       "Enhancing outdoor areas with beautiful and sustainable landscaping.",
-//   },
-// ]
+} from "@/components/ui/navigation-menu";
 
 export function NavBar() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <NavigationMenu>
-      <NavigationMenuList className="flex space-x-4">
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><a href="/">Home</a></NavigationMenuTrigger>
-          {/* <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      <Image src={logo2} alt="Logo" width={50} height={50} />
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Jawabu Interiors is a Limited Company founded by Yvonne Mutisya as the Executive Director and supported by intellected and effective colleagues 
-                      to deliver innovative, creative, and eco-friendly concepts that reflect the culture and traditions of the region.
-                    </p>
-                  </a>
+    <div className="bg-black text-white p-4">
+      <div className="flex justify-between items-center">
+        {isMobile ? (
+          <div onClick={toggleMenu} className="cursor-pointer">
+            <Image src={menuOpen ? closeIcon : menuIcon} alt="Menu" width={24} height={24} />
+          </div>
+        ) : (
+          <NavigationMenu>
+            <NavigationMenuList className="flex space-x-4">
+              <NavigationMenuItem>
+                <NavigationMenuTrigger><Link href="/">Home</Link></NavigationMenuTrigger>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger><Link href="/Projects">Projects</Link></NavigationMenuTrigger>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/About" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/Blog" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Blog
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/Contact" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Contact
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        )}
+      </div>
+      {isMobile && menuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50">
+          <div className="flex justify-end p-4">
+            <div onClick={toggleMenu} className="cursor-pointer">
+              <Image src={closeIcon} alt="Close Menu" width={24} height={24} />
+            </div>
+          </div>
+          <NavigationMenuList className="flex flex-col space-y-2 p-4 text-white">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                <Link href="/" onClick={toggleMenu} className="hover:text-green-500">Home</Link>
+              </NavigationMenuTrigger>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                <Link href="/Projects" onClick={toggleMenu} className="hover:text-green-500">Projects</Link>
+              </NavigationMenuTrigger>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/About" legacyBehavior passHref>
+                <NavigationMenuLink onClick={toggleMenu} className={cn(navigationMenuTriggerStyle(), "hover:text-green-500")}>
+                  About
                 </NavigationMenuLink>
-              </li>
-              <ListItem href="/philosophy" title="Philosophy">
-                Our design philosophy emphasizes sustainability, functionality, and cultural sensitivity, ensuring each project is both unique and meaningful.
-              </ListItem>
-              <ListItem href="/discover" title="Discover">
-                Explore our wide range of services and past projects to see how we can transform your spaces into extraordinary environments.
-              </ListItem>
-              <ListItem href="/process" title="Process">
-                Our process involves close collaboration with clients from concept to completion, ensuring every detail aligns with your vision.
-              </ListItem>
-            </ul>
-          </NavigationMenuContent> */}
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><a href="/Projects">Projects</a></NavigationMenuTrigger>
-          {/* <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {projects.map((project) => (
-                <ListItem
-                  key={project.title}
-                  title={project.title}
-                  href={project.href}
-                >
-                  {project.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent> */}
-        </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <Link href="/services" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Services
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem> */}
-        <NavigationMenuItem>
-          <Link href="/About" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/Blog" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Blog
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/Contact" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <Link href="" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Login
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem> */}
-      </NavigationMenuList>
-    </NavigationMenu>
-  )
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/Blog" legacyBehavior passHref>
+                <NavigationMenuLink onClick={toggleMenu} className={cn(navigationMenuTriggerStyle(), "hover:text-green-500")}>
+                  Blog
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/Contact" legacyBehavior passHref>
+                <NavigationMenuLink onClick={toggleMenu} className={cn(navigationMenuTriggerStyle(), "hover:text-green-500")}>
+                  Contact
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </div>
+      )}
+    </div>
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -167,6 +147,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";

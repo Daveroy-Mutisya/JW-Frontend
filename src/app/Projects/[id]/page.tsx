@@ -1,8 +1,9 @@
 import React from 'react'
 import { NavBar } from '@/components/NavBar'
-import BlogPost from '@/components/BlogPost'
+import ProjectPost from '@/components/ProjectPost'
 
-const BlogPage = () => {
+
+const ProjectsPostPage = () => {
   return (
     <>
     <div className="sticky top-0 z-50 flex justify-between items-center p-4 bg-black">
@@ -22,10 +23,10 @@ const BlogPage = () => {
         </div>
       </div>
       <section>
-        <BlogPost />
+        < ProjectPost />
       </section>
     </>
   )
 }
 
-export default BlogPage
+export default ProjectsPostPage

@@ -17,6 +17,10 @@ import instagram from "../../public/instagram.png"
 import gmail from "../../public/gmail.png"
 import tel from "../../public/tel.png"
 import arrow from "../../public/arrow.png"
+import Link from "next/link";
+
+
+
 
 const ContactDrawer = () => {
   return (
@@ -52,15 +56,17 @@ const ContactDrawer = () => {
                 <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                   <li className="flex items-center">
                     <Image src={gmail} width={50} height={50} alt="Gmail" className="mr-2"/>
-                    Gmail
+                    Gmail:
                   </li>
                   <li className="flex items-center">
                     <Image src={facebook} width={50} height={50} alt="Facebook" className="mr-2"/>
                     Facebook
                   </li>
                   <li className="flex items-center">
+                    <Link href="https://www.instagram.com/jawabuinteriorsltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                     <Image src={instagram} width={50} height={50} alt="Instagram" className="mr-2"/>
                     Instagram
+                    </Link>
                   </li>
                   <li className="flex items-center">
                     <Image src={tel} width={50} height={50} alt="Telephone" className="mr-2"/>
