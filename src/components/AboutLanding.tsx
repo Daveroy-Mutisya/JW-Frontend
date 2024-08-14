@@ -1,85 +1,73 @@
-'use client'
-
 import React from 'react';
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { AboutAccordion } from './AboutAccordion';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
-const ACCESS_KEY = "nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4";
-
-
-interface UnsplashImage {
-  id: string;
-  urls: {
-    full: string;
-  };
-  alt_description: string;
-}
-
-
-const  AboutLandingSection = () => {
-  const [image, setImage] = useState<UnsplashImage | null>(null);
-
-  useEffect(() => {
-    const fetchImage = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.unsplash.com/search/photos?query=black-interior&orientation=landscape&client_id=${ACCESS_KEY}`
-        );
-        const images = response.data.results;
-        if (images.length > 0) {
-          setImage(images[0]);
-        }
-      } catch (error) {
-        console.error('Error fetching image from Unsplash', error);
-      }
-    };
-
-    fetchImage();
-  }, []);
-
-
-
+const AboutLandingSection = () => {
   return (
     <>
-          <div className="relative h-screen w-full">
-        {/* {image && (
-          <Image
-            src={image.urls.full}
-            alt={image.alt_description || 'Green Interior Design'}
-            layout="fill"
-            objectFit="cover"
-            className="blur-md z-0"
-          />
-        )} */}
-        <div className="relative z-20 text-white text-left p-4 hover:text-opacity-100 text-opacity-50 transition duration-300 ease-in-out flex flex-col items-center justify-center h-full">
-          <h2 className="scroll-m-20 border-b pb-2 text-9xl font-semibold tracking-tight first:mt-0">
+      <div className="relative min-h-screen w-full bg-black text-white p-4 flex flex-col items-center justify-center">
+        <div className="text-left text-opacity-50 transition duration-300 ease-in-out">
+          <h2 className="scroll-m-20 border-b pb-2 text-5xl sm:text-7xl md:text-9xl font-semibold tracking-tight first:mt-0">
             About Us
           </h2>
-          <div className='flex flex-row my-5 mx-20'>
-            <div className='flex flex-col w-1/2 pr-10'>
-              <h4 className="scroll-m-20 text-6xl font-semibold tracking-tight text-left text-green-500">
+          <div className="flex flex-col md:flex-row my-5 mx-5 md:mx-20">
+            <div className="flex flex-col md:w-1/2 pr-0 md:pr-10">
+              <h4 className="scroll-m-20 text-2xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-left text-green-500">
                 Welcome to Jawabu Interiors:
               </h4>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl hover:text-green-500">
+              <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl hover:text-green-500">
                 Jawabu Interiors is a sole proprietorship owned and operated by Yvonne Mutisya as the sole Director; supported by Architects, 
                 Quantity Surveyors, a Project Manager, Finance Manager, Business Development Manager, an Office Administrator, Lead Technician, Site Managers, Fleet Manager and an Accountant. 
-                This team has been brought on board to supplement the director’s duties and propagate the achievement of the stipulated goals of the company. 
+                This team has been brought on board to supplement the director’s duties and propagate the achievement of the stipulated goals of the company.
               </p>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl hover:text-green-500">
+              <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl hover:text-green-500">
                 We anticipate hiring more staff in future to keep up with the competitive edge of the market to realize future expansion across the border.
-                We offer comprehensive Interior Design Services for Commercial and Corporate Premises and Residential houses in Kenya and even beyond. 
-                We also provide access to products to complement the design consulting services including furniture, both new and antique, decorator fabric, and home and office accessories. 
+                We offer comprehensive Interior Design Services for Commercial and Corporate Premises and Residential houses in Kenya and even beyond.
+                We also provide access to products to complement the design consulting services including furniture, both new and antique, decorator fabric, and home and office accessories.
                 Our products and services are tailored to seamlessly meet our target market desires and which is affordable in a way that is unique from concept to implementation.
               </p>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl hover:text-green-500">
-                We also provide access to products to complement the design consulting services including furniture, both new and antique, decorator fabric, and home and office accessories. 
+              <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl hover:text-green-500">
+                We also provide access to products to complement the design consulting services including furniture, both new and antique, decorator fabric, and home and office accessories.
                 Our products and services are tailored to seamlessly meet our target market desires and which is affordable in a way that is unique from concept to implementation.
               </p>
             </div>
-            <div className='flex flex-col w-1/2 mt-52'>
-              <AboutAccordion />
+            <div className="flex flex-col md:w-1/2 mt-10 md:mt-0">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>
+                    <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl text-green-500">Vision</p>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl">
+                      Our Vision is to be the leading trend in Interior Design, Project and Construction Management and Landscaping Management; while maintaining the maximum standards of environmental ethics in East and Central Africa.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>
+                    <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl text-green-500">Mission</p>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl">
+                      Our Mission is to be consistent with innovative and creative concepts that reflect the culture and traditions of the Country and also of East and Central Africa, which are ecofriendly.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>
+                    <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl text-green-500">Core Values</p>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="leading-7 mt-6 text-base sm:text-lg md:text-2xl">
+                      Our Core Values are Customer Focus, Quality Work and Effective Client’s Satisfaction.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </div>

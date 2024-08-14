@@ -28,12 +28,10 @@ const ContactDrawer = () => {
       <div>
         <Drawer>
           <DrawerTrigger>
-            <div className='transition duration-150 ease-in-out items-center justify-center'>
-            <Button type="submit" className="w-full p-9">
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+            <div className='hover:text-green-600'>
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
                Contact Info
                 </h3>
-                </Button>
             </div>
           </DrawerTrigger>
           <DrawerContent>
@@ -54,25 +52,27 @@ const ContactDrawer = () => {
                   Social Spaces
                 </h3>
                 <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                  <li className="flex items-center">
+                  <li className="flex items-center text-xl">
                     <Image src={gmail} width={50} height={50} alt="Gmail" className="mr-2"/>
-                    Gmail:
+                    Gmail: info@jawabuinteriors.co.ke
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-xl">
+                    < Link href="">
                     <Image src={facebook} width={50} height={50} alt="Facebook" className="mr-2"/>
-                    Facebook
-                  </li>
-                  <li className="flex items-center">
-                    <Link href="https://www.instagram.com/jawabuinteriorsltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                    <Image src={instagram} width={50} height={50} alt="Instagram" className="mr-2"/>
-                    Instagram
+                    Facebook: Jawabu Interiors Ltd. 
                     </Link>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-xl">
+                    <Link href="https://www.instagram.com/jawabuinteriorsltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <Image src={instagram} width={50} height={50} alt="Instagram" className="mr-2"/>
+                    Instagram:jawabuinteriorsltd
+                    </Link>
+                  </li>
+                  <li className="flex items-center text-xl">
                     <Image src={tel} width={50} height={50} alt="Telephone" className="mr-2"/>
                     Tel: 0114938574, 0791497172
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-xl">
                     <Image src={box} width={50} height={50} alt="P.O. Box" className="mr-2"/>
                     P.O. BOX 100445 - 00101
                   </li>
