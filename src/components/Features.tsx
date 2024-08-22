@@ -52,13 +52,13 @@ const FeaturesSection = () => {
 
   return (
     <div className="absolute inset-0 opacity-50 z-10">
-        <Image
+        {/* <Image
           src= {DarkGreen}
           alt= "Interior Design"
           layout="fill"
           objectFit="cover"
           className="z-0"
-        />
+        /> */}
       <div className=" inset-0  p-10 mt-10 flex flex-col  justify-center  text-white text-center">
         <div className='mt-2 mb-4'>
         <h3 className="text-2xl font-semibold tracking-tight text-green-600 text-center">
