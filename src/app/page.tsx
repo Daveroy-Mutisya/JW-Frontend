@@ -1,6 +1,8 @@
 import { NavBar } from "@/components/NavBar";
 import LandingSection from "@/components/Landing";
 import Philosophy from "@/components/Philosophy";
+import FeaturesSection from "@/components/Features";
+import ProcessSection from "@/components/Process";
 
 export default function Home() {
   return (
@@ -19,7 +21,7 @@ export default function Home() {
       </section>
       {/* Home-Page-Section 3 */}
       <section className="relative min-h-screen flex flex-col justify-center items-center"> {/* Adjusted section height */}
-        {/* <FeaturesSection/> */}
+        <FeaturesSection/>
       </section>
       {/* Home-Page-Section 4 */}
       <section className="relative min-h-screen"> {/* Adjusted section height */}
