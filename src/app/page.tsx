@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* NavBar */}
-      <div className="p-4 bg-black">
+      <div className="p-4 bg-black sticky top-0 z-50">
         <NavBar />
       </div>
       {/* Home-Page-Section 1 */}
