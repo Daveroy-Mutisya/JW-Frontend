@@ -7,26 +7,30 @@ import ProcessSection from "@/components/Process";
 export default function Home() {
   return (
     <>
-      {/* NavBar */}
-      <div className="p-4 bg-black sticky top-0 z-50">
-        <NavBar />
-      </div>
-      {/* Home-Page-Section 1 */}
-      <section className="relative min-h-screen flex flex-col gap-4 justify-center items-center"> {/* Adjusted section height */}
-        <LandingSection />
-      </section>
-      {/* Home-Page-Section 2 */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center"> {/* Adjusted section height */}
-        <Philosophy />
-      </section>
-      {/* Home-Page-Section 3 */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center"> {/* Adjusted section height */}
-        <FeaturesSection/>
-      </section>
-      {/* Home-Page-Section 4 */}
-      <section className="relative min-h-screen"> {/* Adjusted section height */}
-        {/* <ProcessSection /> */}
-      </section>
-    </>
+    {/* NavBar */}
+    <div className="p-4 bg-black sticky top-0 z-50">
+      <NavBar />
+    </div>
+
+    {/* Home-Page-Section 1 */}
+    <section className="relative min-h-screen flex flex-col justify-center items-center">
+      <LandingSection />
+    </section>
+
+    {/* Home-Page-Section 2 */}
+    <section className="relative min-h-screen flex flex-col justify-center items-center">
+      <Philosophy />
+    </section>
+
+    {/* Home-Page-Section 3 */}
+    <section className="relative min-h-screen flex flex-col justify-center items-center mb-0 sm:mb-4">
+      <FeaturesSection />
+    </section>
+
+    {/* Home-Page-Section 4 */}
+    <section className="relative flex flex-col justify-center items-center pt-0 pb-0 sm:pt-0 sm:py-20 min-h-screen">
+      <ProcessSection />
+    </section>
+  </>
   );
 }
