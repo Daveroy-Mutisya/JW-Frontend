@@ -18,26 +18,31 @@ import {
 
 const ProcessSection = () => {
   return (
-    <div className="relative h-screen w-full flex flex-col items-center justify-center">
-      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-      <div className="absolute inset-0 flex flex-col items-center pt-20 justify-center z-20 text-white text-center p-4 backdrop-filter backdrop-blur-md">
-        <h3 className="scroll-m-20 text-4xl font-semibold tracking-tight text-green-600">
-          Our Process
-        </h3>
-        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-semibold tracking-tight first:mt-0">
-          See how it works 
-        </h2>
-        <p className="text-4xl text-muted-foreground">
-          Our commitment to quality and services ensure our clients are happy.
-        </p>
-        <p className="text-4xl text-muted-foreground">
-          We're happy to make you feel more comfortable in your home.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-20 text-white text-center">
-          <Drawer>
+<div className="relative min-h-[100vh] w-full flex flex-col items-center justify-center sm:justify-start my-10 sm:my-20">
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+  <div className="relative flex flex-col items-center justify-center sm:justify-end z-10 text-white text-center p-4 sm:backdrop-filter sm:backdrop-blur-md">
+    <h3 className="scroll-m-20 text-2xl sm:text-3xl font-semibold tracking-tight text-green-600">
+      Our Process
+    </h3>
+    <h2 className="scroll-m-20 border-b pb-2 text-4xl sm:text-5xl font-semibold tracking-tight first:mt-0">
+      See how it works
+    </h2>
+    <p className="text-base sm:text-lg text-muted-foreground mt-4">
+      Our commitment to quality and services ensures our clients are happy.
+    </p>
+    <p className="text-base sm:text-lg text-muted-foreground mt-2">
+      We're happy to make you feel more comfortable in your home.
+    </p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-8 sm:pt-12 text-white text-center">
+    <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Meet & Agree" width={300} height={300} />
-              <h4 className="text-xl font-semibold">Meet & Agree</h4>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+
+              <h4 className="text-lg font-semibold">Meet & Agree</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
@@ -55,8 +60,13 @@ const ProcessSection = () => {
           </Drawer>
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Idea & Concept" width={300} height={300} />
-              <h4 className="text-xl font-semibold">Idea & Concept</h4>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+
+              <h4 className="text-lg font-semibold">Idea & Concept</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
@@ -74,8 +84,13 @@ const ProcessSection = () => {
           </Drawer>
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Design & Create" width={300} height={300} />
-              <h4 className="text-xl font-semibold">Design & Create</h4>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+
+              <h4 className="text-lg font-semibold">Design & Create</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
@@ -93,8 +108,13 @@ const ProcessSection = () => {
           </Drawer>
           <Drawer>
             <DrawerTrigger>
-              <Image src={circle} alt="Build & Install" width={300} height={300} />
-              <h4 className="text-xl font-semibold">Build & Install</h4>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+
+              <h4 className="text-lg font-semibold">Build & Install</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
@@ -110,10 +130,14 @@ const ProcessSection = () => {
               </DrawerFooter>
             </DrawerContent>
           </Drawer>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
+
+
   );
 };
 
 export default ProcessSection;
+
+

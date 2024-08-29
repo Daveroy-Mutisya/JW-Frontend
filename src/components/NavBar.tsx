@@ -73,15 +73,19 @@ export function NavBar() {
     <div className={`hidden md:flex items-center space-x-4`}>
       <NavigationMenu>
         <NavigationMenuList className="flex space-x-4">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <Link href="/" className="hover:text-green-500">Home</Link>
-            </NavigationMenuTrigger>
+        <NavigationMenuItem>
+            <Link href="/" passHref>
+              <NavigationMenuLink className="hover:text-green-500">
+                Home
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <Link href="/Projects" className="hover:text-green-500">Projects</Link>
-            </NavigationMenuTrigger>
+            <Link href="/Projects" passHref>
+              <NavigationMenuLink className="hover:text-green-500">
+                Projects
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/About" passHref>
