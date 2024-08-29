@@ -115,9 +115,9 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={envelope} alt="envelope" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">24/7 Support</h4>
+              <h4 className="text-lg font-semibold sm:text-xl">9-5 Support</h4>
               <p className="leading-6 mt-2 text-sm sm:text-base">
-                We're here for you anytime, day or night.
+                We're here for you anytime, day during office hours.
               </p>
             </div>
           </div>
