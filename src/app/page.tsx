@@ -24,9 +24,9 @@ export default function Home() {
         <FeaturesSection/>
       </section>
       {/* Home-Page-Section 4 */}
-      <section className="relative min-h-screen"> {/* Adjusted section height */}
+      {/* <section className="relative min-h-screen"> Adjusted section height */}
         {/* <ProcessSection /> */}
-      </section>
+      {/* </section> */}
     </>
   );
 }
