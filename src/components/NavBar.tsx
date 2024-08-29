@@ -72,7 +72,7 @@ export function NavBar() {
     {/* Desktop Navigation Menu */}
     <div className={`hidden md:flex items-center space-x-4`}>
       <NavigationMenu>
-        <NavigationMenuList className="flex space-x-4">
+        <NavigationMenuList className="flex space-x-10">
         <NavigationMenuItem>
             <Link href="/" passHref>
               <NavigationMenuLink className="hover:text-green-500">

@@ -148,11 +148,7 @@ export function ContactForm() {
             </div>
           </div>
           <div className="hidden lg:flex lg:items-start lg:justify-center lg:py-12">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.59791510564395!2d36.8007299!3d-1.3050902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f108da9076ce7%3A0x5566082a4039f0a8!2sKanjaro%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1723557189518!5m2!1sen!2ske"
-              width="950"
-              height="950"
-            ></iframe>
+          
           </div>
         </div>
         <ContactDrawer />
