@@ -1,90 +1,76 @@
 'use client'
 
-import React from 'react';
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-
-const ACCESS_KEY = "nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4";
-const API_KEY = "Ad7AFtW0jqjI5XjhmaasmQ==n1FeKUSGrk3Hrqil";
-
-interface UnsplashImage {
-  id: string;
-  urls: {
-    full: string;
-  };
-  alt_description: string;
-}
-
-interface QuoteAPI {
-  quote: string;
-  author: string;
-  category: string;
-}
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const LandingSection = () => {
-  const [images, setImages] = useState<UnsplashImage[]>([]);
+  // List of project images stored in the public/project_pics folder
+  const projectImages = [
+    '/project_pics/Projectpic1.jpeg',
+    '/project_pics/Projectpic2.jpeg',
+    '/project_pics/Projectpic3.jpeg',
+    '/project_pics/Projectpic4.jpeg',
+    '/project_pics/Projectpic5.jpeg',
+    '/project_pics/Projectpic6.jpeg',
+    '/project_pics/Projectpic7.jpeg',
+    '/project_pics/Projectpic9.jpeg',
+    '/project_pics/Projectpic10.jpeg',
+    '/project_pics/Projectpic11.jpeg',
+    '/project_pics/Projectpic12.jpeg',
+    '/project_pics/Projectpic13.jpeg',
+    '/project_pics/Projectpic14.jpeg',
+    '/project_pics/Projectpic15.jpeg',
+    '/project_pics/Projectpic16.jpeg',
+    '/project_pics/Projectpic17.jpeg',
+  ];
+
+  // List of quotes to display
+  const staticQuotes = [
+    {
+      quote: "Elevate your Space with Elegance.",
+      author: "Jawabu Interiors Ltd",
+      category: "Interior Design",
+    },
+    {
+      quote: "Where style meets comfort.",
+      author: "Jawabu Interiors Ltd",
+      category: "Interior Design",
+    },
+    {
+      quote: "Your Vision our Enterprise.",
+      author: "Jawabu Interiors Ltd",
+      category: "Interior Design",
+    },
+  ];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [quotes, setQuotes] = useState<QuoteAPI[]>([]);
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
+  // Cycle through images every 10 seconds
   useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.unsplash.com/search/photos?query=green-interior&orientation=landscape&client_id=${ACCESS_KEY}`
-        );
-        setImages(response.data.results);
-      } catch (error) {
-        console.error("Error fetching images from Unsplash", error);
-      }
-    };
+    const imageInterval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % projectImages.length);
+    }, 10000);
 
-    fetchImages();
-  }, []);
+    return () => clearInterval(imageInterval);
+  }, [projectImages.length]);
 
+  // Cycle through quotes every 10 seconds
   useEffect(() => {
-    if (images.length > 0) {
-      const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 10000); // Change image every 10 seconds
-      return () => clearInterval(interval);
-    }
-  }, [images]);
+    const quoteInterval = setInterval(() => {
+      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % staticQuotes.length);
+    }, 10000);
 
-  useEffect(() => {
-    const fetchQuotes = async () => {
-      try {
-        const response = await axios.get('https://api.api-ninjas.com/v1/quotes?category=success', {
-          headers: {
-            'X-Api-Key': API_KEY,
-          },
-        });
-        setQuotes(response.data);
-      } catch (error) {
-        console.error("Error fetching quotes from API", error);
-      }
-    };
-
-    fetchQuotes();
-  }, []);
-
-  useEffect(() => {
-    if (quotes.length > 0) {
-      const interval = setInterval(() => {
-        setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-      }, 3600); // Change quote every 10 seconds
-      return () => clearInterval(interval);
-    }
-  }, [quotes]);
+    return () => clearInterval(quoteInterval);
+  }, [staticQuotes.length]);
 
   return (
     <div className="relative h-screen w-full flex items-center justify-center">
-      {images.length > 0 && (
+      {/* Display project images */}
+      {projectImages.length > 0 && (
         <Image
-          src={images[currentImageIndex].urls.full}
-          alt={images[currentImageIndex].alt_description || "Interior Design"}
+          src={projectImages[currentImageIndex]}
+          alt={`Project Image ${currentImageIndex + 1}`}
           layout="fill"
           objectFit="cover"
           className="z-0"
@@ -95,13 +81,14 @@ const LandingSection = () => {
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-8xl">
           Quote of the hour:
         </h1>
-        {quotes.length > 0 && (
+        {/* Display quotes */}
+        {staticQuotes.length > 0 && (
           <div>
             <blockquote className="mt-6 border-l-2 pl-6 italic text-4xl">
-              {quotes[currentQuoteIndex].quote}
+              {staticQuotes[currentQuoteIndex].quote}
             </blockquote>
             <blockquote className="mt-6 border-l-2 pl-6 italic text-4xl">
-              {quotes[currentQuoteIndex].author}
+              - {staticQuotes[currentQuoteIndex].author}
             </blockquote>
           </div>
         )}

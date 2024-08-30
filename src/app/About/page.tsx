@@ -16,10 +16,10 @@ const AboutPage = () => {
           <NavBar />
         </div>
       </div>
-      <section>
+      <section className='bg-black'>
         <AboutLandingSection />
       </section>
-      <section className='relative h-screen flex flex-col gap-5 items-center'>
+      <section className=' flex flex-col gap-5 items-center bg-black'>
         <TeamCard />
       </section>
     </>
