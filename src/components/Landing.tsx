@@ -93,15 +93,15 @@ const LandingSection = () => {
       )}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <div className="relative z-20 text-white text-left p-4 hover:text-opacity-100 text-opacity-50 transition duration-300 ease-in-out ">
-        <h1 className="scroll-m-20 text-4xl font-abel font-bold tracking-thin lg:text-8xl">
+        <h1 className="scroll-m-20 text-4xl font-abel font-light tracking-thin lg:text-8xl">
           Quote of the hour:
         </h1>
         {quotes.length > 0 && (
           <div>
-            <blockquote className="mt-6 border-l-2 pl-6 italic font-abel font-light tracking-wide text-4xl">
+            <blockquote className="mt-6 border-l-2 pl-6  font-abel font-light tracking-wide text-4xl">
               {quotes[currentQuoteIndex].quote}
             </blockquote>
-            <blockquote className="mt-6 border-l-2 pl-6 italic font-abel font-light tracking-wide text-4xl">
+            <blockquote className="mt-6 border-l-2 pl-6  font-abel font-light tracking-wide text-4xl">
               {quotes[currentQuoteIndex].author}
             </blockquote>
           </div>

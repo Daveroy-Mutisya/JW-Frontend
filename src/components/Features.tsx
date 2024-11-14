@@ -1,5 +1,7 @@
 'use client';
 
+//finished// 
+
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -53,16 +55,16 @@ const FeaturesSection = () => {
   return (
       <div className="relative p-10 mt-10 sm:mt-20 flex flex-col justify-center text-white text-center">
   <div className='mt-2 mb-4'>
-    <h3 className="text-2xl font-semibold tracking-tight text-green-600 text-center">
+    <h3 className="text-2xl font-abel font-light tracking-wide text-lime-500 text-center">
       Discover
     </h3>
-    <h2 className="border-b pb-2 text-5xl font-semibold tracking-tight text-center leading-snug">
+    <h2 className="border-b pb-2 text-5xl font-abel font-light tracking-wide text-center leading-snug">
       Our Features
     </h2>
-    <p className="text-3xl text-muted-foreground text-center mt-2 leading-relaxed">
+    <p className="text-3xl text-muted-foreground text-center mt-2 leading-relaxed font-abel font-light tracking-wide">
       Our commitment to quality and services ensures our clients are happy.
     </p>
-    <p className="text-3xl text-muted-foreground text-center mt-2 leading-relaxed">
+    <p className="text-3xl text-muted-foreground text-center mt-2 leading-relaxed font-abel font-light tracking-wide">
       We're happy to make you feel more comfortable in your home.
     </p>
   </div>
@@ -70,8 +72,8 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center mx-8 sm:mx-20 lg:mx-40 mt-10">
             <Image src={paintbrush} alt="paintbrush" width={40} height={40} className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24" />
             <div className="mt-6 sm:mt-8">
-              <h4 className="text-base sm:text-lg lg:text-xl font-semibold">Interior Expertise</h4>
-              <p className="leading-6 mt-2 text-sm sm:text-base lg:text-lg">
+              <h4 className="text-base sm:text-lg lg:text-xl font-abel font-normal tracking-wide">Interior Expertise</h4>
+              <p className="font-abel font-light tracking-wide leading-6 mt-2 text-sm sm:text-base lg:text-lg ">
                 Expert interior design tailored to your lifestyle.
               </p>
             </div>
@@ -79,8 +81,8 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={trophy} alt="trophy" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">Award Winning</h4>
-              <p className="leading-6 mt-2 text-sm sm:text-base">
+              <h4 className="text-lg font-abel font-normal tracking-wide sm:text-xl">Award Winning</h4>
+              <p className="leading-6 mt-2 text-sm sm:text-base font-abel font-light tracking-wide">
                 Recognized for our excellence and innovation.
               </p>
             </div>
@@ -88,8 +90,8 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={chat} alt="chat" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">Free Consultation</h4>
-              <p className="leading-6 mt-2 text-sm sm:text-base">
+              <h4 className="text-lg font-semibold sm:text-xl font-abel font-normal tracking-wide">Free Consultation</h4>
+              <p className="leading-6 mt-2 text-sm sm:text-base font-abel font-light tracking-wide">
                 Get expert advice without any cost.
               </p>
             </div>
@@ -97,8 +99,8 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={wallet} alt="wallet" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">Reasonable Prices</h4>
-              <p className="leading-6 mt-2 text-sm sm:text-base">
+              <h4 className="text-lg font-abel font-normal tracking-wide sm:text-xl">Reasonable Prices</h4>
+              <p className="leading-6 mt-2 text-sm sm:text-base font-abel font-light tracking-wide">
                 Quality services at affordable prices.
               </p>
             </div>
@@ -106,8 +108,8 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={work} alt="work" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">Guaranteed Works</h4>
-              <p className="leading-6 mt-2 text-sm sm:text-base">
+              <h4 className="text-lg font-abel font-normal tracking-wide sm:text-xl ">Guaranteed Works</h4>
+              <p className="leading-6 mt-2 text-sm sm:text-base font-abel font-light tracking-wide">
                 We stand by our work with a satisfaction guarantee.
               </p>
             </div>
@@ -115,8 +117,8 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={envelope} alt="envelope" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">9-5 Support</h4>
-              <p className="leading-6 mt-2 text-sm sm:text-base">
+              <h4 className="text-lg font-abel font-normal tracking-wide sm:text-xl">9-5 Support</h4>
+              <p className="leading-6 mt-2 text-sm sm:text-base font-abel font-light tracking-wide">
                 We're here for you anytime, day during office hours.
               </p>
             </div>

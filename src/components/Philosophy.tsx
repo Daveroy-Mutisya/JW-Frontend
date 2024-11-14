@@ -1,3 +1,5 @@
+//finished//
+
 import React from 'react';
 import ProjectCarousel from './ProjectCarousel';
 import ProjectCarousel2 from './ProjectCarousel2';
@@ -7,13 +9,13 @@ const Philosophy = () => {
   return (
     <div className="p-4"> {/* Adjusted padding */}
       <div className="mt-2 mb-4"> {/* Adjusted margins */}
-        <h3 className="text-3xl font-semibold tracking-tight text-green-600 text-center"> {/* Reduced font size */}
+        <h3 className="text-3xl font-abel font-light tracking-wide text-lime-500 text-center"> {/* Reduced font size */}
           Our Philosophy
         </h3>
-        <h2 className="border-b pb-2 text-7xl font-semibold tracking-tight text-center leading-snug"> {/* Adjusted font size and line height */}
+        <h2 className="border-b pb-2 text-7xl font-abel font-light tracking-tight text-center leading-snug"> {/* Adjusted font size and line height */}
           It's not about ideas. It's about making ideas happen
         </h2>
-        <p className="text-3xl text-muted-foreground text-center mt-2 leading-relaxed"> {/* Reduced font size and increased line height */}
+        <p className="text-3xl text-muted-foreground text-center mt-2 leading-relaxed font-abel font-light tracking-wide"> {/* Reduced font size and increased line height */}
           Our commitment to quality and services ensures our clients are happy. We're happy to make you feel comfortable in your own home.
         </p>
       </div>

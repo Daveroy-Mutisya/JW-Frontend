@@ -59,7 +59,7 @@ export default function ProjectCarousel2() {
         {project ? (
           <div className="p-2">
             <Card className="w-full sm:w-[500px] mx-4">
-              <CardContent className="flex items-center justify-center p-4 sm:p-8">
+              <CardContent className="flex items-center justify-center p-4 sm:p-8 font-abel font-light tracking-wide">
                 <Image
                   src={images[currentImageIndex]?.urls.full || "/images/placeholder.jpg"}
                   alt={images[currentImageIndex]?.alt_description || "Interior Design"}
@@ -69,12 +69,12 @@ export default function ProjectCarousel2() {
                 />
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
-                <h4 className="scroll-m-20 text-lg sm:text-xl font-semibold tracking-tight">
+                <h4 className="scroll-m-20 text-lg sm:text-xl font-abel font-light tracking-wide">
                   {project.title}
                 </h4>
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
-                <span className="text-lg sm:text-2xl font-semibold">
+                <span className="text-lg sm:text-2xl font-abel font-light tracking-wide">
                   {project.project_name}
                 </span>
               </CardContent>
