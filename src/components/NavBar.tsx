@@ -51,13 +51,13 @@ export function NavBar() {
   <div className="flex flex-wrap items-center justify-between">
     {/* Left Side - Jawabu Interiors */}
     <div className="flex items-center space-x-4">
-      <h1 className="text-3xl font-extrabold lg:text-3xl">
+      <h1 className="text-3xl font-abel font-light tracking-wide lg:text-3xl">
         Jawabu
       </h1>
-      <h1 className="text-3xl font-extrabold lg:text-3xl ml-4 text-green-500">
+      <h1 className="text-3xl font-abel font-light tracking-wide lg:text-3xl ml-4 text-lime-500">
         Interiors
       </h1>
-      <h1 className="text-3xl font-extrabold text-white-500">
+      <h1 className="text-3xl font-abel font-light tracking-wide text-white-500">
         Ltd
       </h1>
     </div>
@@ -75,35 +75,35 @@ export function NavBar() {
         <NavigationMenuList className="flex space-x-4">
         <NavigationMenuItem>
             <Link href="/" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-lime-500 font-abel font-light tracking-wide">
                 Home
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/Projects" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-lime-500 font-abel font-light tracking-wide">
                 Projects
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/About" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-lime-500 font-abel font-light tracking-wide">
                 About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/Blog" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-lime-500 font-abel font-light tracking-wide">
                 Blog
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/Contact" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-lime-500 font-abel font-light tracking-wide">
                 Contact
               </NavigationMenuLink>
             </Link>
@@ -127,27 +127,27 @@ export function NavBar() {
       <NavigationMenu>
         <NavigationMenuList className="flex flex-col items-center space-y-6 text-2xl">
           <NavigationMenuItem>
-            <Link href="/" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/" onClick={toggleMenu} className="hover:text-lime-500 font-abel font-light tracking-wide">
               Home
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Projects" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Projects" onClick={toggleMenu} className="hover:text-lime-500 font-abel font-light tracking-wide">
               Projects
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/About" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/About" onClick={toggleMenu} className="hover:text-lime-500 font-abel font-light tracking-wide">
               About
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Blog" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Blog" onClick={toggleMenu} className="hover:text-lime-500 font-abel font-light tracking-wide">
               Blog
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Contact" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Contact" onClick={toggleMenu} className="hover:text-lime-500 font-abel font-light tracking-wide">
               Contact
             </Link>
           </NavigationMenuItem>
