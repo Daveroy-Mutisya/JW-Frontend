@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCarousel from './ProjectCarousel';
 import ProjectCarousel2 from './ProjectCarousel2';
 import ProjectCarousel3 from './ProjectCarousel3';
+import ProjectCarousel4 from './ProjectCarousel4';
 
 const Philosophy = () => {
   return (
@@ -26,6 +27,9 @@ const Philosophy = () => {
         </div>
         <div className="flex flex-col items-center mx-2 my-2 w-full sm:w-auto"> {/* Adjusted margins */}
           <ProjectCarousel3 />
+        </div>
+        <div className="flex flex-col items-center mx-2 my-2 w-full sm:w-auto"> {/* Adjusted margins */}
+          <ProjectCarousel4 />
         </div>
       </div>
     </div>

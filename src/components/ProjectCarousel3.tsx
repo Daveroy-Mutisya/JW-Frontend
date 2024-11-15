@@ -32,7 +32,7 @@ export default function ProjectCarousel3() {
     const fetchImages = async () => {
       try {
         const response = await axios.get(
-          `https://api.unsplash.com/search/photos?query=restaurants-interior&orientation=landscape&client_id=${ACCESS_KEY}`,
+          `https://api.unsplash.com/search/photos?query=landscaping-design&orientation=landscape&client_id=${ACCESS_KEY}`,
         );
         setImages(response.data.results);
       } catch (error) {
@@ -70,7 +70,7 @@ export default function ProjectCarousel3() {
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
                 <h4 className="scroll-m-20 text-lg sm:text-xl font-semibold tracking-tight">
-                  {project.title}
+                 Landscaping Design
                 </h4>
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
