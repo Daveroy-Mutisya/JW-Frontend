@@ -1,5 +1,7 @@
 'use client';
 
+//finished//
+
 import * as React from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";

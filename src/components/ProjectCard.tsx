@@ -1,5 +1,6 @@
 'use client'
 
+//finished//
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
@@ -87,7 +88,7 @@ const ProjectCard = () => {
                   <Skeleton className="w-full h-full" />
                 )}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white text-lg font-semibold">{project.project_name}</span>
+                  <span className="text-white text-lg text-lg font-abel font-light tracking-wide">{project.project_name}</span>
                 </div>
               </div>
             ))

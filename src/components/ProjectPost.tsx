@@ -2,6 +2,8 @@
 
 'use client'
 
+//finished//
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -62,13 +64,13 @@ const ProjectPost: React.FC = () => {
           </div>
         )}
         <div className="p-4 w-full">
-          <h2 className="text-4xl font-semibold text-white  text-center">{project.project_name}</h2>
-          <p className="text-white  mt-4 text-lg">{project.description}</p>
-          <p className="text-white  mt-2 text-sm">
+          <h2 className="text-4xl font-abel font-light tracking-wide text-white  text-center">{project.project_name}</h2>
+          <p className="text-white  mt-4 text-lg font-abel font-light tracking-wide">{project.description}</p>
+          <p className="text-white  mt-2 text-sm font-abel font-light tracking-wide">
             {new Date(project.date).toLocaleDateString()}
           </p>
-          <p className="text-white mt-4 text-lg">{project.location}</p>
-          <p className="text-white  mt-4 text-lg">{project.title}</p>
+          <p className="text-white mt-4 text-lg font-abel font-light tracking-wide">{project.location}</p>
+          <p className="text-white  mt-4 text-lg font-abel font-light tracking-wide">{project.title}</p>
         </div>
       </div>
     </>
