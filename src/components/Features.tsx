@@ -68,7 +68,7 @@ const FeaturesSection = () => {
   </div>
   <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 text-white text-center items-center">
           <div className="flex flex-col items-center mx-8 sm:mx-20 lg:mx-40 mt-10">
-            <Image src={paintbrush} alt="paintbrush" width={40} height={40} className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24" />
+            <Image src={paintbrush} alt="paintbrush" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-6 sm:mt-8">
               <h4 className="text-base sm:text-lg lg:text-xl font-semibold">Interior Expertise</h4>
               <p className="leading-6 mt-2 text-sm sm:text-base lg:text-lg">
@@ -115,9 +115,9 @@ const FeaturesSection = () => {
           <div className="flex flex-col items-center">
             <Image src={envelope} alt="envelope" width={40} height={40} className="sm:w-50 sm:h-50" />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold sm:text-xl">24/7 Support</h4>
+              <h4 className="text-lg font-semibold sm:text-xl">9-5 Support</h4>
               <p className="leading-6 mt-2 text-sm sm:text-base">
-                We're here for you anytime, day or night.
+                We're here for you anytime, day during office hours.
               </p>
             </div>
           </div>

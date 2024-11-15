@@ -11,24 +11,20 @@ export default function Home() {
     <div className="p-4 bg-black sticky top-0 z-50">
       <NavBar />
     </div>
-
     {/* Home-Page-Section 1 */}
     <section className="relative min-h-screen flex flex-col justify-center items-center">
       <LandingSection />
     </section>
-
     {/* Home-Page-Section 2 */}
     <section className="relative min-h-screen flex flex-col justify-center items-center">
       <Philosophy />
     </section>
-
     {/* Home-Page-Section 3 */}
     <section className="relative min-h-screen flex flex-col justify-center items-center mb-0 sm:mb-4">
       <FeaturesSection />
     </section>
-
     {/* Home-Page-Section 4 */}
-    <section className="relative flex flex-col justify-center items-center pt-0 pb-0 sm:pt-0 sm:py-20 min-h-screen">
+    <section className="relative min-h-screen flex flex-col justify-center items-center pt-0 pb-0 sm:pt-0 sm:py-20 ">
       <ProcessSection />
     </section>
   </>

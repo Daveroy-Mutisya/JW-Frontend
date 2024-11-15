@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import * as React from "react";
 import Image from "next/image";
@@ -23,7 +23,7 @@ interface JW_Backend {
   project_name: string;
 }
 
-export default function ProjectCarousel() {
+export default function ProjectCarousel4() {
   const [images, setImages] = useState<UnsplashImage[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [project, setProject] = useState<JW_Backend | null>(null);
@@ -32,7 +32,7 @@ export default function ProjectCarousel() {
     const fetchImages = async () => {
       try {
         const response = await axios.get(
-          `https://api.unsplash.com/search/photos?query=interior-design&orientation=landscape&client_id=${ACCESS_KEY}`,
+          `https://api.unsplash.com/search/photos?query=project-management&orientation=landscape&client_id=${ACCESS_KEY}`,
         );
         setImages(response.data.results);
       } catch (error) {
@@ -42,8 +42,8 @@ export default function ProjectCarousel() {
 
     const fetchProject = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/projects');
-        setProject(response.data[0]);
+        const response = await axios.get('http://127.0.0.1:5000/projects/8');
+        setProject(response.data);
       } catch (error) {
         console.error("Error fetching project", error);
       }
@@ -70,7 +70,7 @@ export default function ProjectCarousel() {
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
                 <h4 className="scroll-m-20 text-lg sm:text-xl font-semibold tracking-tight">
-                  Interior Design
+                  Project Management
                 </h4>
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">

@@ -66,10 +66,10 @@ const TeamCard = () => {
 
   return (
     <>
-      <div className='items-center justify-center mt-10'>
+      <div className='items-center justify-center mt-10 '>
         <h2 className="scroll-m-20 border-b pb-2 text-7xl font-semibold tracking-tight first:mt-0 text-white">Team Members</h2>
       </div>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 bg-black">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {users.length === 0 ? (
             <Skeleton className="w-full h-[500px] col-span-1" />

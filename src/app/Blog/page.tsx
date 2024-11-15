@@ -6,7 +6,7 @@ import BlogCard from '@/components/BlogCard';
 const BlogPage = () => {
   return (
     <>
-    <div className="p-4 b-g bg-black ">
+    <div className="p-4 bg-black sticky top-0 z-50 ">
         <div>
           <NavBar />
         </div>

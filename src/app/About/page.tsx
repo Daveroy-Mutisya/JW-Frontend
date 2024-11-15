@@ -11,15 +11,15 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="p-4 bg-black">
+      <div className="p-4 bg-black sticky top-0 z-50">
         <div>
           <NavBar />
         </div>
       </div>
-      <section>
+      <section className='bg-black'>
         <AboutLandingSection />
       </section>
-      <section className='relative h-screen flex flex-col gap-5 items-center'>
+      <section className=' flex flex-col gap-5 items-center bg-black'>
         <TeamCard />
       </section>
     </>
