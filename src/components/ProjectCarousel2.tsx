@@ -74,9 +74,10 @@ export default function ProjectCarousel2() {
                 </h4>
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
-                <span className="text-lg sm:text-2xl font-semibold">
-                  {project.project_name}
-                </span>
+              <p className="leading-7 [&:not(:first-child)]:mt-6">
+              We offer comprehensive building, construction, and civil works services, including roofing, 
+              plumbing, piping, repairs, electrical installations, and cabling.
+                </p>
               </CardContent>
             </Card>
           </div>

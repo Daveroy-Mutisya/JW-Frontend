@@ -40,13 +40,14 @@ const ProcessSection = () => {
   alt="Meet & Agree"
   className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
 />
-              <h4 className="text-lg font-semibold">Meet & Agree</h4>
+              <h4 className="text-lg font-semibold">Inception</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
-                <DrawerTitle>Phase 1: Meet & Agree</DrawerTitle>
+                <DrawerTitle>Phase 1: Inception</DrawerTitle>
                 <DrawerDescription>
-                  In this phase, we meet with you to discuss your needs, preferences, and vision for the project. We agree on the project's scope, timelines, and budget to ensure a clear understanding and mutual expectations.
+                We begin by collaborating closely with stakeholders to define clear goals, understand project aspirations, and establish a shared vision. 
+                This stage sets the foundation for creativity and innovation to flourish.
                 </DrawerDescription>
               </DrawerHeader>
               <DrawerFooter>
@@ -63,13 +64,14 @@ const ProcessSection = () => {
   alt="Meet & Agree"
   className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
 />
-              <h4 className="text-lg font-semibold">Idea & Concept</h4>
+              <h4 className="text-lg font-semibold">Feasibility</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
-                <DrawerTitle>Phase 2: Idea & Concept</DrawerTitle>
+                <DrawerTitle>Phase 2: Feasibility</DrawerTitle>
                 <DrawerDescription>
-                  In this phase, we brainstorm and develop creative concepts that align with your vision. Our team of designers will present various ideas and sketches to help you visualize the potential of your space.
+                In this phase, we conduct comprehensive analyses to assess project viability, ensuring practicality, 
+                sustainability, and alignment with objectives before moving forward.
                 </DrawerDescription>
               </DrawerHeader>
               <DrawerFooter>
@@ -86,13 +88,14 @@ const ProcessSection = () => {
   alt="Meet & Agree"
   className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
 />
-              <h4 className="text-lg font-semibold">Design & Create</h4>
+              <h4 className="text-lg font-semibold">Outline Proposals</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
                 <DrawerTitle>Phase 3: Design & Create</DrawerTitle>
                 <DrawerDescription>
-                  During the design and create phase, we turn concepts into detailed designs and plans. Our team uses state-of-the-art tools to create 3D models and renderings, giving you a realistic preview of the final result.
+                Here, we transform ideas into reality by blending innovation and functionality, crafting tailored 
+                solutions that meet the unique needs of each project.
                 </DrawerDescription>
               </DrawerHeader>
               <DrawerFooter>
@@ -109,13 +112,14 @@ const ProcessSection = () => {
   alt="Meet & Agree"
   className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
 />
-              <h4 className="text-lg font-semibold">Build & Install</h4>
+              <h4 className="text-lg font-semibold">Scheme Design</h4>
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
-                <DrawerTitle>Phase 4: Build & Install</DrawerTitle>
+                <DrawerTitle>Phase 4: Scheme Design</DrawerTitle>
                 <DrawerDescription>
-                  The build and install phase is where your vision comes to life. Our skilled craftsmen and installation teams work meticulously to ensure every detail is executed to perfection, resulting in a space that exceeds your expectations.
+                We develop comprehensive layouts and strategic concepts, focusing on the big picture while 
+                considering technical and aesthetic aspects.
                 </DrawerDescription>
               </DrawerHeader>
               <DrawerFooter>
@@ -125,6 +129,189 @@ const ProcessSection = () => {
               </DrawerFooter>
             </DrawerContent>
           </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Detail Design</h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 5: Detail Design</DrawerTitle>
+                <DrawerDescription>
+                This phase involves refining every element of the design with precision, ensuring that all aspects 
+                are cohesive and ready for execution.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Production Information</h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 6: Production Information</DrawerTitle>
+                <DrawerDescription>
+                We consolidate all technical drawings, specifications, and instructions, providing a clear and 
+                accurate blueprint for the construction phase.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Bill of Quantities</h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 7: Bill of Quantities</DrawerTitle>
+                <DrawerDescription>
+                A detailed breakdown of materials, labor, and costs is prepared, ensuring transparency and 
+                accuracy for budget planning and procurement.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Tender Action </h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 8: Tender Action </DrawerTitle>
+                <DrawerDescription>
+                We facilitate a competitive and transparent tendering process to select the most capable partners 
+                and contractors for project execution.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Project Planning  </h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 9: Project Planning  </DrawerTitle>
+                <DrawerDescription>
+                Strategic timelines and operational plans are established to ensure seamless coordination and 
+                efficient resource management throughout the project.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Operation on Site  </h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 10: Operation on Site  </DrawerTitle>
+                <DrawerDescription>
+                In this phase, our team oversees construction and implementation, ensuring that the design vision
+                is executed with precision and excellence.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+
+          <Drawer>
+            <DrawerTrigger>
+            <Image
+  src={circle}
+  alt="Meet & Agree"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+/>
+              <h4 className="text-lg font-semibold">Completion  </h4>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Phase 11: Completion  </DrawerTitle>
+                <DrawerDescription>
+                The project concludes with the delivery of a polished, fully functional, and high-quality result that 
+                meets and exceeds client expectations.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
     </div>
   </div>
 </div>

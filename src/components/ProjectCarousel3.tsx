@@ -74,9 +74,9 @@ export default function ProjectCarousel3() {
                 </h4>
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
-                <span className="text-lg sm:text-2xl font-semibold">
-                  {project.project_name}
-                </span>
+              <p className="leading-7 [&:not(:first-child)]:mt-6">
+              We provide sports ground maintenance, roundabout landscaping, and gardening, along with supplying flowers and seedlings.
+                </p>
               </CardContent>
             </Card>
           </div>
