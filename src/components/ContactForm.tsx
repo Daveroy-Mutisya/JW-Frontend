@@ -55,22 +55,22 @@ export function ContactForm() {
           <div className="flex items-start justify-items-start py-12">
             <div className="mx-auto grid w-[700px] gap-6">
               <div className="flex flex-col gap-2">
-                <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl">
+                <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl font-abel font-light tracking-wide">
                   REQUEST A QUOTE
                 </p>
-                <h2 className="scroll-m-20 border-b pb-2 text-5xl font-semibold tracking-tight first:mt-0">
+                <h2 className="scroll-m-20 border-b pb-2 text-5xl font-abel font-light tracking-wide first:mt-0">
                   In need of Interior
                 </h2>
               </div>
               <div className="grid gap-2 text-center">
-                <h1 className="text-4xl font-bold">Contact Us</h1>
-                <p className="text-balance text-muted-foreground text-2xl">
+                <h1 className="text-4xl font-abel font-light tracking-wide">Contact Us</h1>
+                <p className="text-balance text-muted-foreground text-2xl font-abel font-light tracking-wide">
                   Please fill in the following details
                 </p>
               </div>
               <form onSubmit={handleSubmit} className="grid gap-4">
                 <div className="grid gap-2">
-                  <Label htmlFor="first_name" className="text-xl">First Name</Label>
+                  <Label htmlFor="first_name" className="text-xl font-abel font-light tracking-wide">First Name</Label>
                   <Input
                     id="first_name"
                     type="text"
@@ -82,7 +82,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="surname" className="text-xl">Surname</Label>
+                  <Label htmlFor="surname" className="text-xl font-abel font-light tracking-wide">Surname</Label>
                   <Input
                     id="surname"
                     type="text"
@@ -94,7 +94,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="email" className="text-xl">Email</Label>
+                  <Label htmlFor="email" className="text-xl font-abel font-light tracking-wide">Email</Label>
                   <Input
                     id="email"
                     type="email"
@@ -106,7 +106,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="phone_number" className="text-xl">Phone Number</Label>
+                  <Label htmlFor="phone_number" className="text-xl font-abel font-light tracking-wide">Phone Number</Label>
                   <Input
                     id="phone_number"
                     type="tel"
@@ -118,7 +118,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="project_type" className="text-xl">Project Type</Label>
+                  <Label htmlFor="project_type" className="text-xl font-abel font-light tracking-wide">Project Type</Label>
                   <Input
                     id="project_type"
                     type="text"
@@ -130,7 +130,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="description" className="text-xl">Description</Label>
+                  <Label htmlFor="description" className="text-xl font-abel font-light tracking-wide">Description</Label>
                   <Input
                     id="description"
                     type="text"
@@ -141,7 +141,7 @@ export function ContactForm() {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full bg-white text-black hover:text-white">
+                <Button type="submit" className="w-full bg-white text-black hover:text-white font-abel font-light tracking-wide">
                   Submit
                 </Button>
               </form>

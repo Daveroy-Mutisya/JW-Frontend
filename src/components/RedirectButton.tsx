@@ -7,7 +7,7 @@ import Link from 'next/link'
 const RedirectButton = () => {
   return (
     <div>
-        <Button>Read More</Button>
+        <Button className='font-abel font-light tracking-wide'>Read More</Button>
       
     </div>
   )

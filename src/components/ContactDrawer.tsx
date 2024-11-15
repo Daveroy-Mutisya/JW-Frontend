@@ -41,39 +41,39 @@ const ContactDrawer = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 p-4">
                 <DrawerDescription>
-                  <p className="leading-7 [&:not(:first-child)]:mt-6 text-xl">
+                  <p className="leading-7 [&:not(:first-child)]:mt-6 text-xl font-abel font-light tracking-wide">
                     We operate from Golf Course Phase I, Off Mucai Drive, Suite No. 203.
                     The office is dedicated to support the work area, client contact work center and display samples of design concepts, products, and past work that facilitate green works.
                   </p>
                 </DrawerDescription>
               </div>
               <div className="md:w-1/2 p-2">
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                <h3 className="scroll-m-20 text-2xl font-abel font-light tracking-wide">
                   Social Spaces
                 </h3>
                 <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                   <li className="flex items-center text-xl">
-                    <Image src={gmail} width={50} height={50} alt="Gmail" className="mr-2"/>
+                    <Image src={gmail} width={50} height={50} alt="Gmail" className="mr-2 font-abel font-light tracking-wide"/>
                     Gmail: info@jawabuinteriors.co.ke
                   </li>
                   <li className="flex items-center text-xl">
                     < Link href="">
-                    <Image src={facebook} width={50} height={50} alt="Facebook" className="mr-2"/>
+                    <Image src={facebook} width={50} height={50} alt="Facebook" className="mr-2 font-abel font-light tracking-wide"/>
                     Facebook: Jawabu Interiors Ltd. 
                     </Link>
                   </li>
                   <li className="flex items-center text-xl">
                     <Link href="https://www.instagram.com/jawabuinteriorsltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                    <Image src={instagram} width={50} height={50} alt="Instagram" className="mr-2"/>
+                    <Image src={instagram} width={50} height={50} alt="Instagram" className="mr-2 font-abel font-light tracking-wide"/>
                     Instagram:jawabuinteriorsltd
                     </Link>
                   </li>
                   <li className="flex items-center text-xl">
-                    <Image src={tel} width={50} height={50} alt="Telephone" className="mr-2"/>
+                    <Image src={tel} width={50} height={50} alt="Telephone" className="mr-2 font-abel font-light tracking-wide"/>
                     Tel: 0114938574, 0791497172
                   </li>
                   <li className="flex items-center text-xl">
-                    <Image src={box} width={50} height={50} alt="P.O. Box" className="mr-2"/>
+                    <Image src={box} width={50} height={50} alt="P.O. Box" className="mr-2 font-abel font-light tracking-wide"/>
                     P.O. BOX 100445 - 00101
                   </li>
                 </ul>

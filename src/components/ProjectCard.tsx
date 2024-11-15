@@ -67,7 +67,7 @@ const ProjectCard = () => {
   return (
     <>
       <div className='items-center justify-center'>
-        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-semibold tracking-tight first:mt-0 text-white">Project Gallery</h2>
+        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-abel font-light tracking-wide first:mt-0 text-white">Project Gallery</h2>
       </div>
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

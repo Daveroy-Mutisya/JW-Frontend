@@ -57,13 +57,13 @@ const BlogLandingSection = () => {
       )}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <div className="relative z-20 text-white text-left p-4 hover:text-opacity-100 text-opacity-50 transition duration-300 ease-in-out ">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-8xl">
+        <h1 className="scroll-m-20 text-4xl font-abel font-light tracking-wide lg:text-8xl">
           Recent BlogPosts:
         </h1>
         {blogs.length > 0 ? (
           <div>
-            <h2 className="mt-6 text-4xl">{blogs[currentBlogIndex].title}</h2>
-            <p className="mt-6 text-xl">{new Date(blogs[currentBlogIndex].created_at).toLocaleDateString()}</p>
+            <h2 className="mt-6 text-4xl font-abel font-light tracking-wide">{blogs[currentBlogIndex].title}</h2>
+            <p className="mt-6 text-xl font-abel font-light tracking-wide">{new Date(blogs[currentBlogIndex].created_at).toLocaleDateString()}</p>
           </div>
         ) : (
           <Skeleton className="w-full h-[500px] col-span-1" />
