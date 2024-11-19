@@ -45,7 +45,7 @@ const ProjectPost: React.FC = () => {
   useEffect(() => {
     const fetchBeforeImages = async () => {
       try {
-        const response = await axios.get(`https://api.unsplash.com/search/photos?query=interior-design-before&orientation=landscape&client_id=${ACCESS_KEY}`);
+        const response = await axios.get(`https://api.unsplash.com/search/photos?query=under-construction-interior&orientation=landscape&client_id=${ACCESS_KEY}`);
         setBeforeImages(response.data.results);
         setLoadingBefore(false);
       } catch (error) {
@@ -55,7 +55,7 @@ const ProjectPost: React.FC = () => {
 
     const fetchAfterImages = async () => {
       try {
-        const response = await axios.get(`https://api.unsplash.com/search/photos?query=interior-design-after&orientation=landscape&client_id=${ACCESS_KEY}`);
+        const response = await axios.get(`https://api.unsplash.com/search/photos?query=interior-design&orientation=landscape&client_id=${ACCESS_KEY}`);
         setAfterImages(response.data.results);
         setLoadingAfter(false);
       } catch (error) {

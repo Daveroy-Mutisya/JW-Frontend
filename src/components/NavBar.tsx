@@ -102,6 +102,13 @@ export function NavBar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
+            <Link href="/SmartHomes" passHref>
+              <NavigationMenuLink className="hover:text-green-500">
+                SmartHomes
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
             <Link href="/Contact" passHref>
               <NavigationMenuLink className="hover:text-green-500">
                 Contact
@@ -144,6 +151,13 @@ export function NavBar() {
           <NavigationMenuItem>
             <Link href="/Blog" onClick={toggleMenu} className="hover:text-green-500">
               Blog
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/SmartHomes" passHref>
+              <NavigationMenuLink className="hover:text-green-500">
+                SmartHomes
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
