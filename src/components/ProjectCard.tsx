@@ -1,5 +1,7 @@
 'use client'
 
+//finished//
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
@@ -66,7 +68,7 @@ const ProjectCard = () => {
   return (
     <>
       <div className='items-center justify-center'>
-        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-semibold tracking-tight first:mt-0 text-white">Project Gallery</h2>
+        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-abel font-light tracking-wide first:mt-0 text-white">Project Gallery</h2>
       </div>
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -74,7 +76,7 @@ const ProjectCard = () => {
             <Skeleton className="w-full h-[500px] col-span-1" />
           ) : (
             projects.map((project, index) => (
-              <div key={project.id} className="relative w-full h-[500px] group overflow-hidden rounded-md cursor-pointer" onClick={() => handleCardClick(project.id)}>
+              <div key={project.id} className="relative w-full h-[500px] group overflow-hidden rounded-md cursor-pointer font-abel font-light tracking-wide" onClick={() => handleCardClick(project.id)}>
                 {images[index] ? (
                   <Image
                     src={images[index].urls.full}
@@ -87,7 +89,7 @@ const ProjectCard = () => {
                   <Skeleton className="w-full h-full" />
                 )}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white text-lg font-semibold">{project.project_name}</span>
+                  <span className="text-white text-lg font-abel font-light tracking-wide">{project.project_name}</span>
                 </div>
               </div>
             ))

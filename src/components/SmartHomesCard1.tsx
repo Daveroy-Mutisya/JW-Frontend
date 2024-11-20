@@ -1,5 +1,7 @@
 "use client";
 
+//finished//
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
@@ -64,7 +66,7 @@ const SmartHomesSection1 = () => {
       <div className="w-full h-full bg-black sticky top-0 z-50">
         <NavBar />
       </div>
-      <div className="bg-black text-white grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+      <div className="bg-black text-white font-abel font-light tracking-wide grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
         {cards.map((card, index) => (
           <div key={index} className="flex flex-col items-start">
             {card.image ? (
@@ -78,7 +80,7 @@ const SmartHomesSection1 = () => {
             ) : (
               <div className="h-96 w-full bg-gray-700 mb-4" /> // Placeholder while loading
             )}
-            <h2 className="text-green-500 text-3xl font-bold tracking-tight mb-2">
+            <h2 className="text-lime-500 text-3xl font-abel font-light tracking-wide mb-2">
               {card.title}
             </h2>
             <div>

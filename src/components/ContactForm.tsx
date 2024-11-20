@@ -76,7 +76,7 @@ export function ContactForm() {
                   REQUEST A QUOTE
                 </p>
                 <h2 className="scroll-m-20 border-b pb-2 text-3xl lg:text-5xl font-abel font-light tracking-wide">
-                  In need of Interior
+                  In need of an Interior
                 </h2>
               </div>
               <div className="text-center space-y-2">
@@ -102,7 +102,7 @@ export function ContactForm() {
                     />
                   </div>
                 ))}
-                <Button type="submit" className="w-full bg-white text-black hover:text-white">
+                <Button type="submit" className="w-full bg-white text-black hover:text-white font-abel font-light tracking-wide">
                   Submit
                 </Button>
               </form>
@@ -111,17 +111,17 @@ export function ContactForm() {
 
           {/* Right Column */}
           <div className="space-y-8 lg:space-y-12">
-            <h3 className="text-2xl lg:text-3xl font-semibold underline-offset-auto">
+            <h3 className="text-2xl lg:text-3xl font-abel font-light tracking-wide underline-offset-auto">
               How to Reach us
             </h3>
-            <div className="hidden lg:block lg:py-4">
+            <div className="hidden lg:block lg:py-4 font-abel font-light tracking-wide">
               <TextGenerateEffect duration={2} filter={false} words={words} />
             </div>
             <div>
-              <h2 className="scroll-m-20 border-b pb-2 text-2xl lg:text-3xl font-semibold tracking-tight">
+              <h2 className="scroll-m-20 border-b pb-2 text-2xl lg:text-3xl font-abel font-light tracking-wide tracking-tight">
                 Social Spaces
               </h2>
-              <ul className="my-6 space-y-4">
+              <ul className="my-6 space-y-4 font-abel font-light tracking-wide">
                 {[
                   { src: gmail, text: "Gmail: info@jawabuinteriors.co.ke", alt: "Gmail" },
                   { src: facebook, text: "Facebook: Jawabu Interiors Ltd.", alt: "Facebook", href: "https://www.facebook.com/www.jawabuinteriors.co.ke" },
@@ -129,10 +129,10 @@ export function ContactForm() {
                   { src: tel, text: "Tel: 0114938574, 0791497172", alt: "Telephone" },
                   { src: box, text: "P.O. BOX 100445 - 00101", alt: "P.O. Box" }
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center text-lg lg:text-xl">
+                  <li key={index} className="flex items-center text-lg lg:text-xl font-abel font-light tracking-wide">
                     <Image src={item.src} width={40} height={40} alt={item.alt} className="mr-2" />
                     {item.href ? (
-                      <Link href={item.href} className="hover:underline">
+                      <Link href={item.href} className="hover:underline font-abel font-light tracking-wide">
                         {item.text}
                       </Link>
                     ) : (

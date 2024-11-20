@@ -2,6 +2,8 @@
 
 'use client'
 
+//finished//
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -95,7 +97,7 @@ const ProjectPost: React.FC = () => {
       <div className="container mx-auto p-4">
         <ResizablePanelGroup direction="horizontal">
           <ResizablePanel>
-            <h3 className="text-xl font-bold mb-2">Before:</h3>
+            <h3 className="text-xl font-abel font-light tracking-wide mb-2">Before:</h3>
             {beforeImages.length > 0 && (
               <div className="relative w-full h-96"> {/* Set parent height */}
                 <Image
@@ -110,7 +112,7 @@ const ProjectPost: React.FC = () => {
           </ResizablePanel>
           <ResizableHandle />
           <ResizablePanel>
-            <h3 className="text-xl font-bold mb-2">After:</h3>
+            <h3 className="text-xl font-abel font-light tracking-wide mb-2">After:</h3>
             {afterImages.length > 0 && (
               <div className="relative w-full h-96"> {/* Set parent height */}
                 <Image
@@ -125,10 +127,10 @@ const ProjectPost: React.FC = () => {
           </ResizablePanel>
         </ResizablePanelGroup>
         <div className="p-4 w-full">
-          <h2 className="text-4xl font-semibold text-white text-center">{project.project_name}</h2>
-          <p className="text-white mt-4 text-lg">{project.description}</p>
-          <p className="text-white mt-4 text-lg">{project.location}</p>
-          <p className="text-white mt-4 text-lg">{project.title}</p>
+          <h2 className="text-4xl font-abel font-light tracking-wide text-white text-center">{project.project_name}</h2>
+          <p className="text-white mt-4 text-lg font-abel font-light tracking-wide">{project.description}</p>
+          <p className="text-white mt-4 text-lg font-abel font-light tracking-wide">{project.location}</p>
+          <p className="text-white mt-4 text-lg font-abel font-light tracking-wide">{project.title}</p>
         </div>
       </div>
     </>
