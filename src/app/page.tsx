@@ -1,3 +1,6 @@
+
+//finished//
+
 import { NavBar } from "@/components/NavBar";
 import LandingSection from "@/components/Landing";
 import Philosophy from "@/components/Philosophy";

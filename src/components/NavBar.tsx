@@ -1,5 +1,7 @@
 'use client'
 
+//finished//
+
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -51,13 +53,13 @@ export function NavBar() {
   <div className="flex flex-wrap items-center justify-between">
     {/* Left Side - Jawabu Interiors */}
     <div className="flex items-center space-x-4">
-      <h1 className="text-3xl font-extrabold lg:text-3xl">
+      <h1 className="text-3xl font-abel font-light tracking-wide lg:text-3xl">
         Jawabu
       </h1>
-      <h1 className="text-3xl font-extrabold lg:text-3xl ml-4 text-green-500">
+      <h1 className="text-3xl font-abel font-light tracking-wide lg:text-3xl ml-4 text-lime-500">
         Interiors
       </h1>
-      <h1 className="text-3xl font-extrabold text-white-500">
+      <h1 className="text-3xl font-abel font-light tracking-wide text-white-500">
         Ltd
       </h1>
     </div>
@@ -75,42 +77,42 @@ export function NavBar() {
         <NavigationMenuList className="flex space-x-10">
         <NavigationMenuItem>
             <Link href="/" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-lime-500 font-abel font-light tracking-wide">
                 Home
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/Projects" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="font-abel font-light tracking-wide hover:text-lime-500">
                 Projects
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/About" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="font-abel font-light tracking-wide hover:text-lime-500">
                 About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/Blog" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="font-abel font-light tracking-wide hover:text-lime-500">
                 Blog
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/SmartHomes" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="font-abel font-light tracking-wide hover:text-lime-500">
                 SmartHomes
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/Contact" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="font-abel font-light tracking-wide hover:text-lime-500">
                 Contact
               </NavigationMenuLink>
             </Link>
@@ -134,34 +136,34 @@ export function NavBar() {
       <NavigationMenu>
         <NavigationMenuList className="flex flex-col items-center space-y-6 text-2xl">
           <NavigationMenuItem>
-            <Link href="/" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               Home
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Projects" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Projects" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               Projects
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/About" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/About" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               About
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Blog" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Blog" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               Blog
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/SmartHomes" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
-                SmartHomes
+              <NavigationMenuLink className="font-abel font-light tracking-wide hover:text-lime-500">
+                Smart Homes
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Contact" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Contact" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               Contact
             </Link>
           </NavigationMenuItem>
@@ -189,8 +191,8 @@ export function NavBar() {
                 )}
                 {...props}
               >
-                <div className="text-sm font-medium leading-none">{title}</div>
-                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                <div className="text-sm font-abel font-light tracking-wide leading-none">{title}</div>
+                <p className="line-clamp-2 text-sm font-abel font-light tracking-wide leading-snug text-muted-foreground">
                   {children}
                 </p>
               </a>

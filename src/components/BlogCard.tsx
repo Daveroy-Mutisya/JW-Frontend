@@ -2,6 +2,8 @@
 
 'use client'
 
+//finished//
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -45,7 +47,7 @@ const BlogCard = () => {
   return (
     <>
       <div className='items-center justify-center mt-10'>
-        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-semibold tracking-tight first:mt-0 text-white">Blog Posts</h2>
+        <h2 className="scroll-m-20 border-b pb-2 text-7xl font-abel font-light tracking-wide first:mt-0 text-white">Blog Posts</h2>
       </div>
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -65,14 +67,14 @@ const BlogCard = () => {
                     />
                   ) : (
                     <div className="w-full h-64 bg-gray-300 flex items-center justify-center">
-                      <span className="text-gray-700">No Image</span>
+                      <span className="text-gray-700 font-abel font-light tracking-wide">No Image</span>
                     </div>
                   )}
                 </div>
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold">{blog.title}</h3>
-                  <p className="text-gray-700 mt-2">{blog.content}</p>
-                  <p className="text-gray-500 mt-2 text-sm">{new Date(blog.created_at).toLocaleDateString()}</p>
+                  <h3 className="text-xl font-abel font-light tracking-wide">{blog.title}</h3>
+                  <p className="text-gray-700 mt-2 font-abel font-light tracking-wide">{blog.content}</p>
+                  <p className="text-gray-500 mt-2 text-sm font-abel font-light tracking-wide">{new Date(blog.created_at).toLocaleDateString()}</p>
                 </div>
               </div>
             ))

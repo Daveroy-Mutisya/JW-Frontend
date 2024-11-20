@@ -1,5 +1,7 @@
 'use client'
 
+//finished//
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -70,30 +72,30 @@ export function ContactForm() {
           <div className="flex items-start justify-center py-8 lg:py-12">
             <div className="w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl space-y-6">
               <div className="flex flex-col gap-2 text-center lg:text-left">
-                <p className="leading-7 text-2xl font-medium">
+                <p className="leading-7 text-2xl font-abel font-light tracking-wide">
                   REQUEST A QUOTE
                 </p>
-                <h2 className="scroll-m-20 border-b pb-2 text-3xl lg:text-5xl font-semibold tracking-tight">
+                <h2 className="scroll-m-20 border-b pb-2 text-3xl lg:text-5xl font-abel font-light tracking-wide">
                   In need of Interior
                 </h2>
               </div>
               <div className="text-center space-y-2">
-                <h1 className="text-2xl lg:text-4xl font-bold">Contact Us</h1>
-                <p className="text-muted-foreground text-lg lg:text-2xl">
+                <h1 className="text-2xl lg:text-4xl font-abel font-light tracking-wide">Contact Us</h1>
+                <p className="text-muted-foreground text-lg lg:text-2xl font-abel font-light tracking-wide">
                   Please fill in the following details
                 </p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 {["first_name", "surname", "email", "phone_number", "project_type", "description"].map((field, index) => (
                   <div key={index} className="grid gap-2">
-                    <Label htmlFor={field} className="text-lg lg:text-xl capitalize">
+                    <Label htmlFor={field} className="text-lg lg:text-xl capitalize font-abel font-light tracking-wide">
                       {field.replace('_', ' ')}
                     </Label>
                     <Input
                       id={field}
                       type={field === "email" ? "email" : field === "phone_number" ? "tel" : "text"}
                       placeholder={field === "description" ? "Talk to us" : ""}
-                      className="text-lg lg:text-xl p-4 h-12 lg:h-14"
+                      className="text-lg lg:text-xl p-4 h-12 lg:h-14 font-abel font-light tracking-wide"
                       value={formData[field as keyof typeof formData]} // Ensures correct indexing
                       onChange={handleChange}
                       required

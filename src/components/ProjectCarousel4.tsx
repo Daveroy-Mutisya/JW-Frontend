@@ -1,5 +1,7 @@
 'use client';
 
+//finished//
+
 import * as React from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -65,16 +67,16 @@ export default function ProjectCarousel4() {
                   alt={images[currentImageIndex]?.alt_description || "Interior Design"}
                   width={300}
                   height={300}
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto font-abel font-light tracking-wide"
                 />
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
-                <h4 className="scroll-m-20 text-lg sm:text-xl font-semibold tracking-tight">
+                <h4 className="scroll-m-20 text-lg sm:text-xl font-abel font-light tracking-wide">
                   Project Management
                 </h4>
               </CardContent>
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
-              <p className="leading-7 [&:not(:first-child)]:mt-6">
+              <p className="leading-7 [&:not(:first-child)]:mt-6 font-abel font-light tracking-wide">
               We excel in landscaping, project management, and diverse aspects of building and construction.
                 </p>
               </CardContent>

@@ -1,3 +1,6 @@
+
+//finished//
+
 import React from 'react'
 import { NavBar } from '@/components/NavBar'
 import BlogPost from '@/components/BlogPost'

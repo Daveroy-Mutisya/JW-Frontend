@@ -2,6 +2,8 @@
 
 'use client'
 
+//finished//
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -60,9 +62,9 @@ const BlogPost: React.FC = () => {
           </div>
         )}
         <div className="p-4 w-full">
-          <h2 className="scroll-m-20 border-b pb-2 text-6xl font-semibold tracking-tight first:mt-0 text-center">{blog.title}</h2>
-          <p className="text-white mt-4 text-3xl text-center">{blog.content}</p>
-          <p className="text-white mt-2 text-xl text-center">
+          <h2 className="scroll-m-20 border-b pb-2 text-6xl font-abel font-light tracking-wide first:mt-0 text-center">{blog.title}</h2>
+          <p className="text-white mt-4 text-3xl text-center font-abel font-light tracking-wide">{blog.content}</p>
+          <p className="text-white mt-2 text-xl text-center font-abel font-light tracking-wide">
             {new Date(blog.created_at).toLocaleDateString()}
           </p>
         </div>
