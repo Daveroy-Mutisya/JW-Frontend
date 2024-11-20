@@ -118,7 +118,7 @@ export function ContactForm() {
               <TextGenerateEffect duration={2} filter={false} words={words} />
             </div>
             <div>
-              <h2 className="scroll-m-20 border-b pb-2 text-2xl lg:text-3xl font-abel font-light tracking-wide tracking-tight">
+              <h2 className="scroll-m-20 border-b pb-2 text-2xl lg:text-3xl font-abel font-light tracking-wide">
                 Social Spaces
               </h2>
               <ul className="my-6 space-y-4 font-abel font-light tracking-wide">
