@@ -84,7 +84,7 @@ const SmartHomesSection1 = () => {
               {card.title}
             </h2>
             <div>
-              <TextGenerateEffect words={card.words} duration={2} filter={false} />
+              <TextGenerateEffect className="font-abel font-light tracking-wide" words={card.words} duration={2} filter={false} />
             </div>
           </div>
         ))}
