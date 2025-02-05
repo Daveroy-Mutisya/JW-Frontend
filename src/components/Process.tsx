@@ -35,13 +35,16 @@ const ProcessSection = () => {
     <p className="text-base sm:text-3xl text-muted-foreground mt-2 font-abel font-light tracking-wide">
       We're happy to make you feel more comfortable in your home.
     </p>
+    <p className="text-base sm:text-xl text-muted-foreground mt-5 font-abel font-light tracking-wide">
+      Click a circle for more
+    </p>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-8 sm:pt-12 text-white text-center font-abel font-light tracking-wide">
     <Drawer>
             <DrawerTrigger>
             <Image
   src={circle}
   alt="Meet & Agree"
-  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full"
+  className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 max-w-full hover:"
 />
               <h4 className="text-lg font-abel font-light tracking-wide">Inception</h4>
             </DrawerTrigger>
