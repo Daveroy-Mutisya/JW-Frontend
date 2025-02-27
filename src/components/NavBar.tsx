@@ -117,6 +117,11 @@ export function NavBar() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/Login" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
+              Login
+            </Link>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </div>
@@ -165,6 +170,11 @@ export function NavBar() {
           <NavigationMenuItem>
             <Link href="/Contact" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               Contact
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/Login" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
+              Login
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>

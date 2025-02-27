@@ -63,7 +63,8 @@ const SmartHomesSection1 = () => {
 
   return (
     <>
-      <div className="w-full h-full bg-black sticky top-0 z-50">
+    <div className=" bg-black">
+    <div className=" bg-black sticky top-0 z-50 mb-5">
         <NavBar />
       </div>
       <div className="bg-black text-white font-abel font-light tracking-wide grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
@@ -89,6 +90,7 @@ const SmartHomesSection1 = () => {
           </div>
         ))}
       </div>
+    </div>
     </>
   );
 };

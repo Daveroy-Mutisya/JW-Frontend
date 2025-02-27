@@ -1,5 +1,6 @@
 import React from 'react'
 import SmartHomesSection1 from '@/components/SmartHomesCard1'
+import { MacbookScrollSmartHome } from '@/components/MacSmartStructure'
 
 
 const SmartHomesPage = () => {
@@ -7,6 +8,9 @@ const SmartHomesPage = () => {
     <>
     <div>
       <SmartHomesSection1 />
+    </div>
+    <div>
+      <MacbookScrollSmartHome />
     </div>
     </>
   )
