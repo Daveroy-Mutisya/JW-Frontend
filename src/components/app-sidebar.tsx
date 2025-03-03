@@ -2,174 +2,145 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
   BookOpen,
   Bot,
   Command,
   Frame,
-  GalleryVerticalEnd,
+  LifeBuoy,
   Map,
   PieChart,
+  Send,
   Settings2,
   SquareTerminal,
 } from "lucide-react"
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "./nav-projects"
+import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
-import { TeamSwitcher } from "./team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarRail,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
 const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
-      title: "Playground",
+      title: "Home",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
+    },
+    {
+      title: "Projects",
+      url: "#",
+      icon: Map,
       items: [
         {
-          title: "History",
+          title: "Corporate and Commercial Clients",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Hospitality Industry",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Banking Industry",
           url: "#",
         },
+        {
+            title: "Institutions",
+            url: "#",
+          },
+          {
+            title: "Residential Works",
+            url: "#",
+          },
+          {
+            title: "Landscaping",
+            url: "#",
+          },
       ],
     },
     {
-      title: "Models",
+      title: "Blogs",
+      url: "#",
+      icon: BookOpen,
+    },
+    {
+      title: "Colleagues",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "Finance Team",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "Admin Team",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "Architect Team",
           url: "#",
         },
+        {
+          title: "Quantity Surveyor Team",
+          url: "#",
+        },
+        {
+            title: "Design Team",
+            url: "#",
+        },
+        {
+            title: "Sales & Marketing Team",
+            url: "#",
+        },
+        
       ],
     },
     {
-      title: "Documentation",
+      title: "Contact Form",
       url: "#",
       icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
     },
   ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar variant="inset" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" asChild>
+              <a href="#">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                  <Command className="size-4" />
+                </div>
+                <div className="grid flex-1 text-left text-sm leading-tight">
+                  <span className="truncate font-semibold">Jawabu Interiors </span>
+                  <span className="truncate text-xs">Limited</span>
+                </div>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
-      <SidebarRail />
     </Sidebar>
   )
 }

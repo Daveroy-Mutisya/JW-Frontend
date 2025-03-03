@@ -44,7 +44,7 @@ export default function ProjectCarousel3() {
 
     const fetchProject = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/projects/8');
+        const response = await axios.get('https://jawabu-interiors-backend.onrender.com/projects/8');
         setProject(response.data);
       } catch (error) {
         console.error("Error fetching project", error);

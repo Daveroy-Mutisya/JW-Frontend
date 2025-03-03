@@ -50,7 +50,7 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post("http://127.0.0.1:5000/contacts", formData)
+    axios.post("https://jawabu-interiors-backend.onrender.com", formData)
       .then(response => {
         setContact([...contact, response.data]);
         alert("Form submitted successfully!");

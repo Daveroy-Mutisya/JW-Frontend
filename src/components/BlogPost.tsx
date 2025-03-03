@@ -25,7 +25,7 @@ const BlogPost: React.FC = () => {
   useEffect(() => {
     if (!id) return; // Ensure id is defined
 
-    const API = 'http://127.0.0.1:5000';
+    const API = 'https://jawabu-interiors-backend.onrender.com';
 
     fetch(`${API}/blogs/${id}`, {
       method: 'GET',
