@@ -90,7 +90,6 @@ const TeamCard = () => {
                   <Skeleton className="w-full h-full" />
                 )}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white text-lg font-abel font-light tracking-wide">{user.name}</span>
                   <span className="text-white text-lg font-abel font-light tracking-wide">{user.department}</span>
                 </div>
               </div>

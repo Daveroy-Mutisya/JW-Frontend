@@ -9,6 +9,12 @@ const nextConfig = {
           port: '',
           pathname: '/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'jawabu-interiors-backend.onrender.com',
+          port: '',
+          pathname: '/project_pics/**',
+        },
       ],
     },
   };

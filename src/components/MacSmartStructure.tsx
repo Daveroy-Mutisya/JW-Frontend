@@ -14,7 +14,7 @@ export function MacbookScrollSmartHome() {
         }
       >
         <Video
-          src="public/Smart_Homes_Video/Smart_Homes_Advertisement.mp4"
+          src="Smart_Homes_Video/Smart_Homes_Advertisement.mp4"
           className="w-full h-full object-cover"
         />
       </MacbookScroll>
