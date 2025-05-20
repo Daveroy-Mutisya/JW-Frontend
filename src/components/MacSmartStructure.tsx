@@ -11,7 +11,7 @@ export function MacbookScrollSmartHome() {
             <Badge className="h-10 w-10 transform -rotate-12" />
           </Link>
         }
-        src="/cropped_jawabu.jpg"
+        src="/public/Smart_Home_pics /SmartHomeOffice.png"
         showGradient={false}
         
       />
