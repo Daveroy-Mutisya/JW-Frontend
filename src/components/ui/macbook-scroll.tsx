@@ -25,16 +25,24 @@ import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import Image from "next/image";
 
+type MacbookScrollProps = {
+  badge?: React.ReactNode;
+  children?: React.ReactNode;
+};
+
+
 export const MacbookScroll = ({
   src,
   showGradient,
   title,
   badge,
+  children,
 }: {
   src?: string;
   showGradient?: boolean;
   title?: string | React.ReactNode;
   badge?: React.ReactNode;
+  children?: React.ReactNode;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -85,12 +93,15 @@ export const MacbookScroll = ({
       </motion.h2>
       {/* Lid */}
       <Lid
-        src={src}
-        scaleX={scaleX}
-        scaleY={scaleY}
-        rotate={rotate}
-        translate={translate}
-      />
+  src={src}
+  scaleX={scaleX}
+  scaleY={scaleY}
+  rotate={rotate}
+  translate={translate}
+>
+  {children}
+</Lid>
+
       {/* Base area */}
       <div className="h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative -z-10">
         {/* above keyboard bar */}
@@ -125,12 +136,14 @@ export const Lid = ({
   rotate,
   translate,
   src,
+  children,
 }: {
   scaleX: MotionValue<number>;
   scaleY: MotionValue<number>;
   rotate: MotionValue<number>;
   translate: MotionValue<number>;
   src?: string;
+  children?: React.ReactNode;
 }) => {
   return (
     <div className="relative [perspective:800px]">
@@ -164,17 +177,27 @@ export const Lid = ({
         }}
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
-        <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <Image
-          src={src as string}
-          alt="aceternity logo"
-          fill
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
-        />
+        {children ? (
+          <div className="absolute inset-0 rounded-lg overflow-hidden">
+            {children}
+          </div>
+        ) : src ? (
+          <Image
+            src={src}
+            alt="Screen content"
+            fill
+            className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-[#272729] rounded-lg flex items-center justify-center text-white">
+            <AceternityLogo />
+          </div>
+        )}
       </motion.div>
     </div>
   );
 };
+
 
 export const Trackpad = () => {
   return (
@@ -665,3 +688,4 @@ const AceternityLogo = () => {
     </svg>
   );
 };
+
