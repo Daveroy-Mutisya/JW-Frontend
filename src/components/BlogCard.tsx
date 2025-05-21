@@ -73,7 +73,6 @@ const BlogCard = () => {
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-abel font-light tracking-wide">{blog.title}</h3>
-                  <p className="text-gray-700 mt-2 font-abel font-light tracking-wide">{blog.content}</p>
                   <p className="text-gray-500 mt-2 text-sm font-abel font-light tracking-wide">{new Date(blog.created_at).toLocaleDateString()}</p>
                 </div>
               </div>
