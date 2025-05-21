@@ -33,7 +33,7 @@ const ProcessSection = () => {
       Our commitment to quality and services ensures our clients are happy.
     </p>
     <p className="text-base sm:text-3xl text-muted-foreground mt-2 font-abel font-light tracking-wide">
-      We're happy to make you feel more comfortable in your home.
+      We are happy to make you feel more comfortable in your home.
     </p>
     <p className="text-base sm:text-xl text-muted-foreground mt-5 font-abel font-light tracking-wide">
       Click a circle for more

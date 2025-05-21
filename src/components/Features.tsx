@@ -65,7 +65,7 @@ const FeaturesSection = () => {
       Our commitment to quality and services ensures our clients are happy.
     </p>
     <p className="text-3xl font-abel font-light tracking-wide text-muted-foreground text-center mt-2 leading-relaxed">
-      We're happy to make you feel more comfortable in your home.
+      We are happy to make you feel more comfortable in your home.
     </p>
   </div>
   <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 text-white text-center items-center font-abel font-light tracking-wide">
@@ -119,7 +119,7 @@ const FeaturesSection = () => {
             <div className="mt-4">
               <h4 className="text-lg font-abel font-light tracking-wide sm:text-xl">9-5 Support</h4>
               <p className="leading-6 mt-2 text-sm sm:text-base font-abel font-light tracking-wide">
-                We're here for you anytime, day during office hours.
+                We are here for you anytime, day during office hours.
               </p>
             </div>
           </div>

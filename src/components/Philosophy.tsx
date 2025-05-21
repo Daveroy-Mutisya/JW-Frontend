@@ -15,10 +15,10 @@ const Philosophy = () => {
           Our Philosophy
         </h3>
         <h2 className="border-b pb-2 text-7xl font-abel font-light tracking-wide text-center leading-snug"> {/* Adjusted font size and line height */}
-          It's not about ideas. It's about making ideas happen
+          It is not about ideas. It is about making ideas happen
         </h2>
         <p className="text-3xl font-abel font-light tracking-wide text-muted-foreground text-center mt-2 leading-relaxed"> {/* Reduced font size and increased line height */}
-          Our commitment to quality and services ensures our clients are happy. We're happy to make you feel comfortable in your own home.
+          Our commitment to quality and services ensures our clients are happy. We are happy to make you feel comfortable in your own home.
         </p>
       </div>
       <div className="flex flex-wrap justify-center w-full my-6"> {/* Adjusted bottom margin */}
