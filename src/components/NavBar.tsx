@@ -172,11 +172,11 @@ export function NavBar() {
               Contact
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <Link href="/Login" onClick={toggleMenu} className="font-abel font-light tracking-wide hover:text-lime-500">
               Login
             </Link>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
