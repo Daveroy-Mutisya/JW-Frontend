@@ -14,7 +14,7 @@ import paintbrush from "../../public/paintbrush.png";
 import work from "../../public/work.png";
 import DarkGreen from "../../public/DarkGreen.jpg"
 
-const ACCESS_KEY = 'nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4';
+const ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
 interface UnsplashImage {
   id: string;

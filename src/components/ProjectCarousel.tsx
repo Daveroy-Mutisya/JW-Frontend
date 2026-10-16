@@ -9,7 +9,10 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import axios from "axios";
 
-const ACCESS_KEY = "nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4";
+
+const ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
+
+console.log("Unsplash key:", ACCESS_KEY);
 
 interface UnsplashImage {
   id: string;

@@ -6,7 +6,6 @@ import Image from 'next/image';
 import axios from 'axios';
 import { NavBar } from '@/components/NavBar';
 import AboutLandingSection from '@/components/AboutLanding';
-import TeamCard from '@/components/TeamCard';
 import { InfiniteMovingClientelleCards } from '@/components/ClientelleCard';
 
 
@@ -26,9 +25,7 @@ const AboutPage = () => {
       <div>
         <InfiniteMovingClientelleCards />
       </div>
-      <section className=' flex flex-col gap-5 items-center bg-black'>
-        <TeamCard />
-      </section>
+    
     </>
   );
 }

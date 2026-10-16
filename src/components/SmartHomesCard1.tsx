@@ -7,7 +7,7 @@ import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { NavBar } from "@/components/NavBar";
 
-const ACCESS_KEY = "nUXJ7zUiXb2Y6s0ar-9Db6buSzzOA3wTIw-ay2XOJz4";
+const ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
 const SmartHomesSection1 = () => {
   const [images, setImages] = useState({
