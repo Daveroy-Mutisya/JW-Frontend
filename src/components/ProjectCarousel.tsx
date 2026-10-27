@@ -66,7 +66,7 @@ export default function ProjectCarousel() {
             <Card className="w-full sm:w-[500px] mx-4">
               <CardContent className="flex items-center justify-center p-4 sm:p-8">
                 <Image
-                  src={images[currentImageIndex]?.urls.full || "/images/placeholder.jpg"}
+                  src={images[currentImageIndex]?.urls.full || "/placeholder.jpg"}
                   alt={images[currentImageIndex]?.alt_description || "Interior Design"}
                   width={300}
                   height={300}
